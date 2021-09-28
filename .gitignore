@@ -1,0 +1,11 @@
+# MacOS
+.DS_Store
+
+# Jekyl
+/_site
+/.sass-cache
+/_config-test.yml
+/_site
+/_config-local-ip.yml
+/_config-ip.yml
+/.jekyll-cache

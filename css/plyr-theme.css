@@ -1,0 +1,5 @@
+.plyr {
+    --plyr-audio-controls-background: var(--casa-color-primary-rev);
+    --plyr-color-main: var(--casa-color-primary);
+    --plyr-audio-control-color: var(--casa-color-primary-max);
+}

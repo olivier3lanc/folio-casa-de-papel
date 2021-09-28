@@ -1,0 +1,37 @@
+---
+layout: libdoc/playground
+permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
+# unlisted: true
+# iframe_mode: true
+---
+<main class="u-mb-xxl">
+    <section class="u-h-200vh">
+        <header class="c-grid m-center m-middle c-position m-sticky m-top-0 u-h-100vh u-brep-no-repeat u-bpos-center"
+                my-scroll-frames="intro"
+                my-scroll-frames-detector="intro-detector"
+                data-json="json/ursula.json">
+            <h1 class="c-grid m-column u-c-primary-max u-lh-title u-lsp-title">
+                <span class="u-lh-casa u-lsp-casa">La Casa</span>
+                <span class="c-grid m-middle">
+                    <span class="u-fs-xl u-mr-xxs u-p-xs u-bc-primary u-lh-1">de</span>Papel
+                </span>
+            </h1>
+            <audio id="player" controls>
+                <source src="audio/broken-coastline.mp3" type="audio/mp3">
+            </audio>
+        </header>
+        <div id="intro-detector"></div>
+    </section>
+    <section class="u-h-200vh">
+        <p class="c-grid m-center m-middle c-position m-sticky m-top-0 u-h-100vh u-brep-no-repeat u-bpos-center"
+                my-scroll-frames="scene-1"
+                my-scroll-frames-detector="scene-1-detector"
+                data-json="json/pacopedro.json">
+            Atresmedia
+        </p>
+        <div id="scene-1-detector" style="height: 10px;
+        background: red;
+        z-index: 10;
+        position: absolute;"></div>
+    </section>
+</main>
