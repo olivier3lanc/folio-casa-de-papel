@@ -1,6 +1,6 @@
 ---
 ---
 [
-{% for i in (19..38) %}{ "url": "../img/1/casa_credit_1_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
+{% for i in (19..38) %}{ "url": "{{site.url}}{{site.baseurl}}/img/1/casa_credit_1_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
 {% endfor %}
 ]
