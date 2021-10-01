@@ -1,3 +1,7 @@
 const player = new Plyr('#player', {
-    controls: ['play', 'volume'],
+    controls: ['play','restart'],
+    title: 'Example Title',
+    loop: {
+        active: true
+    }
 });

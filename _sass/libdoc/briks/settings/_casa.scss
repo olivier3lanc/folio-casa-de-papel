@@ -19,7 +19,7 @@ $briks-css-variables-prefix:            'casa-';
     UNIT
     The default unit used into the entire design system
 */
-$briks-unit:                            'vmax';
+$briks-unit:                            'px';
 /* 
     COMPONENTS PREFIX
     The prefix which preceeds every component name
@@ -175,6 +175,14 @@ $briks-fonts: (
         path:        '../fonts/compacta-bold/',
         fallback:    'sans-serif'
     ),
+    lead-2: (
+        type:        'local',
+        filename:    'Tungsten-Semibold',
+        name:        'Tungsten-Semibold',
+        weight:      600,
+        path:        '../fonts/tungsten-semibold/',
+        fallback:    'sans-serif'
+    ),
 );
 
 /*
@@ -208,13 +216,13 @@ $briks-fonts: (
     FONT SIZES
 */
 $briks-font-sizes: (
-    xxs:    1.25,
-    xs:     1.5,
-    sm:     1.75,
-    md:     2.25,
-    lg:     3,
-    xl:     4.5,
-    xxl:    8
+    xxs:    12,
+    xs:     15,
+    sm:     18,
+    md:     22,
+    lg:     30,
+    xl:     45,
+    xxl:    80
 );
 
 /*
@@ -282,13 +290,13 @@ Y88b  d88P 888 d88P 888  888 Y88b.    888 888  888 Y88b 888      X88
 */
 $briks-spacings: (
     none:   0,
-    xxs:    0.5,
-    xs:     1,
-    sm:     2,
-    md:     3.75,
-    lg:     5,
-    xl:     8.75,
-    xxl:    15
+    xxs:    5,
+    xs:     10,
+    sm:     20,
+    md:     40,
+    lg:     60,
+    xl:     90,
+    xxl:    150
 );
 
 /*
@@ -342,7 +350,7 @@ $briks-borders: (
     BORDER RADIUS
 */
 $briks-border-radius: (
-    min: 7,
+    min: 10,
     max: 128,
 );
 
@@ -463,6 +471,41 @@ $briks-utilities: (
         additional-names-and-values: (),
         responsive: false
     ),
+    border-radius: (
+        enabled: true,
+        prefix: 'brad-',
+        names-and-values: $briks-border-radius,
+        additional-names-and-values: (),
+        responsive: false
+    ),
+    border-top-left-radius: (
+        enabled: true,
+        prefix: 'bradtl-',
+        names-and-values: $briks-border-radius,
+        additional-names-and-values: (),
+        responsive: false
+    ),
+    border-top-right-radius: (
+        enabled: true,
+        prefix: 'bradtr-',
+        names-and-values: $briks-border-radius,
+        additional-names-and-values: (),
+        responsive: false
+    ),
+    border-bottom-right-radius: (
+        enabled: true,
+        prefix: 'bradbr-',
+        names-and-values: $briks-border-radius,
+        additional-names-and-values: (),
+        responsive: false
+    ),
+    border-bottom-left-radius: (
+        enabled: true,
+        prefix: 'bradbl-',
+        names-and-values: $briks-border-radius,
+        additional-names-and-values: (),
+        responsive: false
+    ),
     border: (
         enabled: true,
         prefix: 'b-',
@@ -565,8 +608,8 @@ $briks-utilities: (
         enabled: true,
         prefix: 'lsp-',
         names-and-values: (
-            'casa': -0.4vmax,
-            'title': -0.2vmax,
+            'none': 0,
+            'title': -0.04em,
         ),
         additional-names-and-values: (),
         responsive: false
@@ -578,7 +621,7 @@ $briks-utilities: (
             '0': 0,
             '1': 1em,
             'base': 1.3em,
-            'title': 7vmax,
+            'title': 0.9em,
             'inherit': inherit,
             'initial': initial
         ),
@@ -655,7 +698,9 @@ $briks-utilities: (
         enabled: true,
         prefix: 'p-',
         names-and-values: $briks-spacings,
-        additional-names-and-values: (),
+        additional-names-and-values: (
+            de: my-spacing(xs) 13px
+        ),
         responsive: true
     ),
     padding-top: (
@@ -801,6 +846,15 @@ $briks-utilities: (
         additional-names-and-values: (),
         responsive: false
     ),
+    white-space: (
+        enabled: true,
+        prefix: 'ws-',
+        names-and-values: (
+            nowrap: nowrap
+        ),
+        additional-names-and-values: (),
+        responsive: false
+    ),
     width: (
         enabled: true,
         prefix: 'w-',
@@ -891,6 +945,26 @@ $briks-components-generic: (
             ),
             bottom: (
                 align-items: flex-end
+            ),
+            nowrap: (
+                flex-wrap: nowrap
+            )
+        )
+    ),
+    ar: (
+        enabled: true,
+        responsive: false,
+        defaults: (),
+        modifiers: (
+            square: (
+                pseudo-elements: (
+                    before: (
+                        content: '',
+                        float: left,
+                        pointer-events: none,
+                        padding-top: 100%,
+                    )
+                )
             )
         )
     ),
