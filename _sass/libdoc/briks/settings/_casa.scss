@@ -72,6 +72,7 @@ Y88b  d88P Y88..88P 888 Y88..88P 888          X88
 $primary-color:             #af3b34;
 $briks-colors: (
     primary:                $primary-color,
+    primary-alt:            briks-smart-contrast(-30, $primary-color),
     primary-max:            briks-smart-contrast(100, $primary-color),
     primary-rev:            briks-smart-contrast(-100, $primary-color),
 );
@@ -610,6 +611,7 @@ $briks-utilities: (
         names-and-values: (
             'none': 0,
             'title': -0.04em,
+            'large': 0.1em,
         ),
         additional-names-and-values: (),
         responsive: false
@@ -825,6 +827,15 @@ $briks-utilities: (
         ),
         additional-names-and-values: (),
         responsive: true
+    ),
+    text-transform: (
+        enabled: true,
+        prefix: 'tt-',
+        names-and-values: (
+            'uppercase': uppercase
+        ),
+        additional-names-and-values: (),
+        responsive: false
     ),
     transition: (
         enabled: true,

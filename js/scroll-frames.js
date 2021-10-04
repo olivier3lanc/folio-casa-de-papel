@@ -27,12 +27,12 @@ let myScrollFrames = {
             }
         }
         // Limits between 0 and 1
-        if (response > 1) {
-            response = 1;
-        }
-        if (response < 0) {
-            response = 0;
-        }
+        // if (response > 1) {
+        //     response = 1;
+        // }
+        // if (response < 0) {
+        //     response = 0;
+        // }
         return response;
     },
     anims: {},
@@ -61,7 +61,8 @@ let myScrollFrames = {
                             ready: false,
                             transfer: false,
                             backgroundImage: '',
-                            backgroundSizes: []
+                            backgroundSizes: [],
+                            init: false
                         }
                         // Let's fetch
                         fetch(anim_json_url).then(function(response) {
@@ -146,7 +147,7 @@ let myScrollFrames = {
                                     }
                                     
                                     // Apply the background-image property on element
-                                    el_anim.style.backgroundImage = myScrollFrames['anims'][anim_id]['backgroundImage'];
+                                    //el_anim.style.backgroundImage = myScrollFrames['anims'][anim_id]['backgroundImage'];
                                     // Start 
                                     myScrollFrames.frame();
                                     // Apply listener
@@ -172,11 +173,36 @@ let myScrollFrames = {
                 } else {
                     current_scroll_line = myScrollFrames.getScrollLine(myScrollFrames['anims'][anim_id]['el']);
                 }
-                const frameIndex = myScrollFrames['anims'][anim_id]['transfer'](current_scroll_line);
+                console.log(anim_id, current_scroll_line);
+                if (current_scroll_line >= -2 && current_scroll_line <= 1) {
+                    // console.log(anim_id+' est en cours');
+                    if (!myScrollFrames['anims'][anim_id]['init']) {
+                        myScrollFrames['anims'][anim_id]['el']['style']['background-image']  = myScrollFrames['anims'][anim_id]['backgroundImage'];
+                        myScrollFrames['anims'][anim_id]['init'] = true;
+                        // console.log(anim_id+ 'images appliquées');
+                    }
+                    
+                }
+                // if (current_scroll_line >= -1 && current_scroll_line < 0) {
+                //     if (!myScrollFrames['anims'][anim_id]['init']) {
+                //         myScrollFrames['anims'][anim_id]['el']['style']['background-image']  = myScrollFrames['anims'][anim_id]['backgroundImage'];
+                //         myScrollFrames['anims'][anim_id]['init'] = true;
+                //         console.log(anim_id+ 'images appliquées en lazy');
+                //     }
+                //     // console.log(anim_id+'  va arriver')
+                // }
+                let frameIndex = myScrollFrames['anims'][anim_id]['transfer'](current_scroll_line);
+                if (current_scroll_line < 0) {
+                    frameIndex = 0;
+                }
+                if (current_scroll_line > 1) {
+                    frameIndex = 1;
+                }
                 const index = Math.round(frameIndex * (myScrollFrames['anims'][anim_id]['backgroundSizes'].length - 1));
                 // console.log(anim_id, current_scroll_line, frameIndex);
                 // Apply proper background-size property
                 myScrollFrames['anims'][anim_id]['el']['style']['background-size'] = myScrollFrames['anims'][anim_id]['backgroundSizes'][index];
+                
             }
         });
     }

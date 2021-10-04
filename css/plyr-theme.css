@@ -1,8 +1,8 @@
 .plyr {
-    --plyr-audio-controls-background: var(--casa-color-primary-rev);
+    --plyr-audio-controls-background: transparent;
     --plyr-color-main: var(--casa-color-primary);
     --plyr-audio-control-color: var(--casa-color-primary-max);
-    --plyr-control-spacing: var(--casa-spacing-md);
+    --plyr-control-spacing: var(--casa-spacing-sm);
     --plyr-control-radius: 0;
     min-width: inherit;
 
