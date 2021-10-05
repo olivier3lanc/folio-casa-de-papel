@@ -173,7 +173,7 @@ let myScrollFrames = {
                 } else {
                     current_scroll_line = myScrollFrames.getScrollLine(myScrollFrames['anims'][anim_id]['el']);
                 }
-                console.log(anim_id, current_scroll_line);
+                // console.log(anim_id, current_scroll_line);
                 if (current_scroll_line >= -2 && current_scroll_line <= 1) {
                     // console.log(anim_id+' est en cours');
                     if (!myScrollFrames['anims'][anim_id]['init']) {
@@ -181,16 +181,7 @@ let myScrollFrames = {
                         myScrollFrames['anims'][anim_id]['init'] = true;
                         // console.log(anim_id+ 'images appliquées');
                     }
-                    
                 }
-                // if (current_scroll_line >= -1 && current_scroll_line < 0) {
-                //     if (!myScrollFrames['anims'][anim_id]['init']) {
-                //         myScrollFrames['anims'][anim_id]['el']['style']['background-image']  = myScrollFrames['anims'][anim_id]['backgroundImage'];
-                //         myScrollFrames['anims'][anim_id]['init'] = true;
-                //         console.log(anim_id+ 'images appliquées en lazy');
-                //     }
-                //     // console.log(anim_id+'  va arriver')
-                // }
                 let frameIndex = myScrollFrames['anims'][anim_id]['transfer'](current_scroll_line);
                 if (current_scroll_line < 0) {
                     frameIndex = 0;
