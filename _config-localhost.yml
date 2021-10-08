@@ -101,7 +101,8 @@ playground:
         - /js/ola.min.js
         - /js/scroll-frames.js
         - /js/scroll-btween.js
-        - https://cdn.plyr.io/3.6.8/plyr.js
+        - /js/casadepapel.js
+        - /js/plyr.js
         - /js/audio.js
 
 # Settings for the assets layout

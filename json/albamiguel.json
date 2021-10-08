@@ -1,0 +1,6 @@
+---
+---
+[
+{% for i in (0..74) %}{ "url": "{{site.url}}{{site.baseurl}}/img/albamiguel/casa_credit_albamiguel_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]

@@ -4,164 +4,77 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
 # unlisted: true
 # iframe_mode: true
 ---
-<main class="u-mb-xxl">
-    <h1 class="c-position m-fixed m-middle-center m-anchor-middle-center u-m-none u-c-primary-max u-lh-title u-lsp-title u-z-100"
-        scroll-btween="title"
-        scroll-btween-detector="scene-2-detector"
+<header>
+    <h1 id="cdp_title"
+        class="c-position m-fixed m-middle-center m-anchor-middle-center u-m-none u-c-primary-max u-lh-title u-lsp-title u-z-100"
+        scroll-btween="cdp_title"
+        scroll-btween-detector="cdp_scene_detector"
         data-transform="translateX(-50%) translateY(-50%) scale(|1 to 0.2|)"
-        data-top="calc(|50 to 100|% - |0 to 45|px)"
-        data-left="calc(|0:50 to 50:50 to 100:0|% + |0 to 49|px)">
+        data-top="calc(|50 to 100|% - |0 to 23|px)"
+        data-left="calc(|0:50 to 50:50 to 100:0|% + |0 to 40|px)">
         <span class="">La Casa</span>
         <span class="c-grid m-middle">
             <span class="u-fs-xl u-mr-xxs u-p-de u-bc-primary u-lh-1 u-lsp-none">de</span>Papel
         </span>
     </h1>
+</header>
 
-    <section class="u-h-100vh">
-        <figure class="u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                my-scroll-frames="scene-2"
-                my-scroll-frames-detector="scene-2-detector"
-                data-json="json/scene_2.json"
-                data-timeline="0:0 to 30:100 to 100:100">
-        </figure>
-        <div class="c-position m-absolute m-top-left u-w-100 u-h-100 u-bc-primary-rev u-faded"></div>
-        <div id="scene-2-detector" class="u-relative u-z-10 u-bb-large-solid-primary" scroll-btween="line-1" data-width="|0 to 100|%"></div>
-    </section>
-
-    <section class="u-h-200vh u-relative">
-        <figure class="c-position m-sticky m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                my-scroll-frames="scene-ursula"
-                my-scroll-frames-detector="scene-ursula-detector"
-                data-json="json/ursula.json">
-        </figure>
-        <p class="c-position m-fixed m-bottom-50 m-left-xl u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none"
-            scroll-btween="scene-ursula"
-            scroll-btween-detector="scene-ursula-detector"
-            data-opacity="|0:0 to 20:1 to 80:1 to 100:0|"
-            data-transform="rotate(15deg) translateX(|0 to 100|%)">
-            Úrsula Corberó
-            <span   class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
-                    scroll-btween="scene-ursula-line-1"
-                    scroll-btween-detector="scene-ursula-detector"
-                    data-width="|0 to 120|%"></span>
-            <span   class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block"
-                    style="top:-150%"
-                    scroll-btween="scene-ursula-line-2"
-                    scroll-btween-detector="scene-ursula-detector"
-                    data-height="|0 to 400|%"></span>
-        </p>
-        <div id="scene-ursula-detector"></div>
-    </section>
-    <div class="u-relative u-z-10 u-bb-large-solid-primary" scroll-btween="line-2" data-width="|0 to 100|%"></div>
-    
-    <section class="u-h-200vh u-relative">
-        <figure class="c-position m-sticky m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                my-scroll-frames="scene-alvaro"
-                my-scroll-frames-detector="scene-alvaro-detector"
-                data-json="json/alvaro.json">
-        </figure>
-        <div class="c-position m-absolute m-top-left u-w-100 u-h-100 u-bc-primary-max u-faded"></div>
-        <p class="c-position m-fixed m-bottom-50 m-left-xl u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none"
-            scroll-btween="scene-alvaro"
-            scroll-btween-detector="scene-alvaro-detector"
-            data-opacity="|0:0 to 20:1 to 80:1 to 100:0|"
-            data-transform="translateX(|0 to 100|%)">
-            Álvaro Morte
-            <span   class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
-                    scroll-btween="scene-alvaro-line-1"
-                    scroll-btween-detector="scene-alvaro-detector"
-                    data-width="|0 to 120|%"></span>
-            <span   class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block"
-                    style="top:-150%"
-                    scroll-btween="scene-alvaro-line-2"
-                    scroll-btween-detector="scene-alvaro-detector"
-                    data-height="|0 to 400|%"></span>
-        </p>
-        <div id="scene-alvaro-detector"></div>
-    </section>
-    <div class="u-relative u-z-10 u-bb-large-solid-primary" scroll-btween="line-3" data-width="|0 to 100|%"></div>
-    
-    <section class="u-h-200vh u-relative">
-        <figure class="c-position m-sticky m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                my-scroll-frames="scene-itziar"
-                my-scroll-frames-detector="scene-itziar-detector"
-                data-json="json/itziar.json">
-        </figure>
-        <div class="c-position m-absolute m-top-left u-w-100 u-h-100 u-bc-primary-max u-faded"></div>
-        <p class="c-position m-fixed m-middle-center u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none"
-            scroll-btween="scene-itziar"
-            scroll-btween-detector="scene-itziar-detector"
-            data-opacity="|0:0 to 20:1 to 80:1 to 100:0|"
-            data-transform="translateY(-|50 to 0|%) translateX(-50%)">
-            Itziar Ituño
-            <span   class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
-                    scroll-btween="scene-itziar-line-1"
-                    scroll-btween-detector="scene-itziar-detector"
-                    data-width="|0 to 120|%"></span>
-            <span   class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block"
-                    style="top:-150%"
-                    scroll-btween="scene-itziar-line-2"
-                    scroll-btween-detector="scene-itziar-detector"
-                    data-height="|0 to 400|%"></span>
-        </p>
-        <div id="scene-itziar-detector"></div>
-    </section>
-    <div class="u-relative u-z-10 u-bb-large-solid-primary" scroll-btween="line-4" data-width="|0 to 100|%"></div>
-    
-    <section class="u-h-200vh u-relative">
-        <figure class="c-position m-sticky m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                my-scroll-frames="scene-pacopedro"
-                my-scroll-frames-detector="scene-pacopedro-detector"
-                data-json="json/pacopedro.json">
-        </figure>
-        <div class="c-position m-absolute m-top-left u-w-100 u-h-100 u-bc-primary-rev u-faded"></div>
-        <p class="c-position m-fixed m-middle-center u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none"
-            scroll-btween="scene-pacopedro-paco"
-            scroll-btween-detector="scene-pacopedro-detector"
-            data-opacity="|0:0 to 20:1 to 80:1 to 100:0|"
-            data-transform="translateY(-|50 to 0|%) translateX(-120%)">
-            Paco Tous
-            <span   class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
-                    scroll-btween="scene-pacopedro-paco-line-1"
-                    scroll-btween-detector="scene-pacopedro-detector"
-                    data-width="|0 to 120|%"></span>
-            <span   class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block"
-                    style="top:-150%"
-                    scroll-btween="scene-pacopedro-paco-line-2"
-                    scroll-btween-detector="scene-pacopedro-detector"
-                    data-height="|0 to 400|%"></span>
-        </p>
-        <p class="c-position m-fixed m-middle-center u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none"
-            scroll-btween="scene-pacopedro-pedro"
-            scroll-btween-detector="scene-pacopedro-detector"
-            data-opacity="|0:0 to 20:1 to 80:1 to 100:0|"
-            data-transform="translateY(-|50 to 0|%) translateX(20%)">
-            Pedro Alonso
-            <span   class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
-                    scroll-btween="scene-pacopedro-pedro-line-1"
-                    scroll-btween-detector="scene-pacopedro-detector"
-                    data-width="|0 to 120|%"></span>
-            <span   class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block"
-                    style="top:-150%"
-                    scroll-btween="scene-pacopedro-pedro-line-2"
-                    scroll-btween-detector="scene-pacopedro-detector"
-                    data-height="|0 to 400|%"></span>
-        </p>
-        <div id="scene-pacopedro-detector"></div>
-    </section>
+<main class="u-h-100vh">
+    {% for scene in site.data.scenes %}
+        <article id="{{scene.id}}" class="cdp_scene {% if forloop.first == false %}u-none{% endif %}">
+            <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
+                    scroll-frames{% if forloop.first == false %}-disabled{% endif %}="{{scene.id}}"
+                    scroll-frames-detector="cdp_scene_detector"
+                    data-json="json/{{scene.id}}.json">
+            </figure>
+            {% for element in scene.elements %}
+                <p class="{{element.main_class}}"
+                    scroll-btween{% if forloop.first == false %}-disabled{% endif %}="{{scene.id}}"
+                    scroll-btween-detector="cdp_scene_detector"
+                    {% for tween in element.main_tweens %} data-{{tween.property}}="{{tween.value}}"{% endfor %}>
+                    {{element.main_text}}
+                    {% for inner_element in element.inner_elements %}
+                        <span   class="{{inner_element.class}}"
+                                scroll-btween{% if forloop.first == false %}-disabled{% endif %}="{{inner_element.id}}"
+                                scroll-btween-detector="cdp_scene_detector"
+                                {% for tween in inner_element.tweens %} data-{{tween.property}}="{{tween.value}}"{% endfor %}>{{inner_element.text}}</span>
+                    {% endfor %}
+                </p>
+            {% endfor %}
+        </article>
+    {% endfor %}
 </main>
 
-<aside class="c-position m-fixed m-bottom-xs m-left-xs c-grid m-nowrap u-z-1 u-brad-min u-b-thin-solid-primary u-o-hidden">
-    <figure class="u-m-none u-p-none" 
-            scroll-btween="intro-to-thumbnail"
-            scroll-btween-detector="scene-2-detector"
+<div id="cdp_scene_detector"></div>
+<div class="u-h-100vh"></div>
+<button class="c-btn u-relative u-mb-xxl" onclick="casaDePapel.playNextScene()">Next</button>
+
+<nav class="c-position m-fixed m-bottom-0 m-left-0 c-grid m-nowrap u-z-1">
+    <span   id="cdp_nav_line_1"
+            class="c-position m-absolute m-top-0 m-left-0 u-bt-thin-solid-primary u-pe-none"
+            scroll-btween="cdp_nav_line_1"
+            scroll-btween-detector="cdp_scene_detector"
+            data-width="|0 to 100|vw"></span>
+    <figure id="cdp_nav_thumbnail"
+            class="u-m-none u-p-none" 
+            scroll-btween="cdp_nav_thumbnail"
+            scroll-btween-detector="cdp_scene_detector"
             data-width="|0 to 70|px"></figure>
-    <div class="c-grid m-middle u-pl-sm u-pr-sm u-pt-xs u-pb-xs u-lh-1">
+    <!-- <div class="c-grid m-middle u-pl-sm u-pr-sm u-pt-xs u-pb-xs u-lh-1">
         <a href="https://www.youtube.com/watch?v=F1oHBcTdKL4" class="u-ff-lead-2 u-fs-xs" target="_blank">
             <span class="u-block u-ws-nowrap">My Life Is Going On</span>
             <span>Cecilia Krull</span></a>
-    </div>
+    </div> -->
     <audio id="player">
         <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
     </audio>
-</aside>
+    <div class="c-grid">
+        {% for scene in site.data.scenes %}
+            <a  id="{{scene.id}}_nav" 
+                class="{% if forloop.first == false %}u-pe-none u-faded{% endif %}"
+                href="#" 
+                title="Scene {{forloop.index}}" 
+                onclick="casaDePapel.playScene('{{scene.id}}')">{{forloop.index}}</a>
+        {% endfor %}
+    </div>
+</nav>

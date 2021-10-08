@@ -1,6 +1,6 @@
 let scrollBtween = {
     defaults: {
-        frameDurationinMs: 20, // Integer - Duration in ms between to animation states
+        frameDurationinMs: 30, // Integer - Duration in ms between to animation states
         tweenerIntervalinMs: 300, // Integer - Available only if tweener is enabled, duration between to tweens
         enabled: true // boolean - Sets the status of animation interval
     },
@@ -46,13 +46,13 @@ let scrollBtween = {
             elems_anims.forEach(function(anim) {
                 const anim_id = anim.getAttribute('scroll-btween');
                 // Start populating custom index to quickly retrieve useful data on scroll binding function
-                scrollBtween['tweenIndex'][anim_id] = [];
+                scrollBtween.tweenIndex[anim_id] = {};
                 Object.keys(anim.dataset).forEach(function(property, forEachIndex) {
                     const sourceExpression = anim.dataset[property].split('|');
                     let finalExpression = [];
                     let index = 0;
                     if (forEachIndex === 0) {
-                        scrollBtween.tweenIndex[anim_id] = { transfer: {}, properties: []};
+                        scrollBtween.tweenIndex[anim_id] = { transfer: {}, properties: [], el: anim, enabled: scrollBtween.defaults.enabled };
                     }
                     sourceExpression.forEach(function(partial) {
                         const fromToArray = partial.split(' to ');
@@ -146,18 +146,20 @@ let scrollBtween = {
         if (typeof Ola == 'function') {
             for (const anim_id in scrollBtween.tweenIndex) {
                 if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
-                    const node = document.querySelector('[scroll-btween="'+anim_id+'"]');
-                    if (node !== null) {
-                        // Get scroll line
-                        const scroll_line = scrollBtween.getIntersection(node);
-                        // Get the target value to reach
-                        let ola_update_set = {};
-                        for (const tween_id in scrollBtween['tweenIndex'][anim_id]['transfer']) {
-                            if (Object.hasOwnProperty.call(scrollBtween['tweenIndex'][anim_id]['transfer'], tween_id)) {
-                                ola_update_set[tween_id] = scrollBtween['tweenIndex'][anim_id]['transfer'][tween_id](scroll_line);
+                    if (scrollBtween.tweenIndex[anim_id] !== null) {
+                        const node = scrollBtween.tweenIndex[anim_id]['el'];
+                        if (typeof node == 'object' && scrollBtween.tweenIndex[anim_id]['enabled']) {
+                            // Get scroll line
+                            const scroll_line = scrollBtween.getIntersection(node);
+                            // Get the target value to reach
+                            let ola_update_set = {};
+                            for (const tween_id in scrollBtween.tweenIndex[anim_id]['transfer']) {
+                                if (Object.hasOwnProperty.call(scrollBtween.tweenIndex[anim_id]['transfer'], tween_id)) {
+                                    ola_update_set[tween_id] = scrollBtween.tweenIndex[anim_id]['transfer'][tween_id](scroll_line);
+                                }
                             }
+                            scrollBtween.tween.set(ola_update_set, delay);
                         }
-                        scrollBtween.tween.set(ola_update_set, delay);
                     }
                 }
             }
@@ -167,29 +169,31 @@ let scrollBtween = {
     apply: function() {
         for (const anim_id in scrollBtween.tweenIndex) {
             if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
-                const node = document.querySelector('[scroll-btween="'+anim_id+'"]');
-                if (node !== null) {
-                    let scroll_line = 0;
-                    if (typeof Ola == 'undefined') {
-                        scroll_line = scrollBtween.getIntersection(node);
-                    }
-                    if (typeof scrollBtween['tweenIndex'][anim_id]['properties'] == 'object') {
-                        scrollBtween['tweenIndex'][anim_id]['properties'].forEach(function(data) {
-                            let completeTweenedValueToApply = '';
-                            data.expression.forEach(function(partialValue) {
-                                if (typeof scrollBtween['tweenIndex'][anim_id]['transfer'][partialValue] == 'function') {
-                                    if (typeof Ola == 'function') {
-                                        completeTweenedValueToApply += scrollBtween.tween[partialValue].toString();
+                if (scrollBtween.tweenIndex[anim_id] !== null) {
+                    const node = scrollBtween.tweenIndex[anim_id]['el'];
+                    if (typeof node == 'object' && scrollBtween.tweenIndex[anim_id]['enabled']) {
+                        let scroll_line = 0;
+                        if (typeof Ola == 'undefined') {
+                            scroll_line = scrollBtween.getIntersection(node);
+                        }
+                        if (typeof scrollBtween.tweenIndex[anim_id]['properties'] == 'object') {
+                            scrollBtween.tweenIndex[anim_id]['properties'].forEach(function(data) {
+                                let completeTweenedValueToApply = '';
+                                data.expression.forEach(function(partialValue) {
+                                    if (typeof scrollBtween.tweenIndex[anim_id]['transfer'][partialValue] == 'function') {
+                                        if (typeof Ola == 'function') {
+                                            completeTweenedValueToApply += scrollBtween.tween[partialValue].toString();
+                                        } else {
+                                            completeTweenedValueToApply += scrollBtween.tweenIndex[anim_id]['transfer'][partialValue](scroll_line).toString();
+                                        }
                                     } else {
-                                        completeTweenedValueToApply += scrollBtween['tweenIndex'][anim_id]['transfer'][partialValue](scroll_line).toString();
+                                        completeTweenedValueToApply += partialValue;
                                     }
-                                } else {
-                                    completeTweenedValueToApply += partialValue;
-                                }
+                                });
+                                // Apply the final style on the specifed node
+                                node.style[data.property] = completeTweenedValueToApply;
                             });
-                            // Apply the final style on the specifed node
-                            node.style[data.property] = completeTweenedValueToApply;
-                        });
+                        }
                     }
                 }
             }
@@ -202,13 +206,59 @@ let scrollBtween = {
             // requestAnimationFrame(scrollBtween.apply);
         }
     },
-    // Start / Resume animation interval
-    start: function() {
-        scrollBtween.defaults.enabled = true;
+    // Start animation interval
+    // @id - string - Optional - id of the tween/anim
+    //      If @id is set, starts the specified tween/anim
+    //      If no @id is set, starts all tweens/anims
+    start: function(id) {
+        if (typeof id == 'string') {
+            if (scrollBtween.tweenIndex[id] !== undefined) {
+                scrollBtween.tweenIndex[id]['enabled'] = true;
+            }
+        }
+        if (id === undefined) {
+            for (const anim_id in scrollBtween.tweenIndex) {
+                if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
+                    scrollBtween.tweenIndex[anim_id]['enabled'] = true;
+                }
+            }
+        }
     },
     // Stop / Pause animation interval
-    stop: function() {
-        scrollBtween.defaults.enabled = false;
+    // @id - string - Optional - id of the tween/anim
+    //      If @id is set, stops the specified tween/anim
+    //      If no @id is set, stops all tweens/anims
+    stop: function(id) {
+        if (typeof id == 'string') {
+            if (scrollBtween.tweenIndex[id] !== undefined) {
+                scrollBtween.tweenIndex[id]['enabled'] = false;
+            }
+        }
+        if (id === undefined) {
+            for (const anim_id in scrollBtween.tweenIndex) {
+                if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
+                    scrollBtween.tweenIndex[anim_id]['enabled'] = false;
+                }
+            }
+        }
+    },
+    // Destroy 
+    // @id - string - Optional - id of the tween/anim to destroy
+    //      If @id is set, destroys the specified tween/anim
+    //      If no @id is set, destroys all tweens/anims
+    destroy: function(id) {
+        if (typeof id == 'string') {
+            if (scrollBtween.tweenIndex[id] !== undefined) {
+                scrollBtween.tweenIndex[id] = null;
+            }
+        }
+        if (id === undefined) {
+            for (const anim_id in scrollBtween.tweenIndex) {
+                if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
+                    scrollBtween.tweenIndex[anim_id] = null;
+                }
+            }
+        }
     }
 }
 scrollBtween.update();
