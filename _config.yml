@@ -3,8 +3,8 @@
 title: La Casa de Papel # title of the documentation
 description: >- # Description of the docs. (>- means to ignore newlines until next param)
   Web design inspired from La Casa de Papel serie (Money Heist) start credits
-#baseurl: "/ow/folio-2021/casavideo/folio-casa-de-papel/_site" # the subpath of your site, e.g. /blog
-#url: "http://localhost" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/ow/folio-2021/casavideo/folio-casa-de-papel/_site" # the subpath of your site, e.g. /blog
+# url: "http://localhost" # the base hostname & protocol for your site, e.g. http://example.com
 #permalink: /:path/:basename/:output_ext
 #destination: ../marcelrent/public/proto-app # Build relative path destination. The destination directory e.g. /blog
 #keep_files: [cache]
@@ -101,7 +101,8 @@ playground:
         - /js/ola.min.js
         - /js/scroll-frames.js
         - /js/scroll-btween.js
-        - https://cdn.plyr.io/3.6.8/plyr.js
+        - /js/casadepapel.js
+        - /js/plyr.js
         - /js/audio.js
 
 # Settings for the assets layout
