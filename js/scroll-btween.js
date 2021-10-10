@@ -219,7 +219,9 @@ let scrollBtween = {
         if (id === undefined) {
             for (const anim_id in scrollBtween.tweenIndex) {
                 if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
-                    scrollBtween.tweenIndex[anim_id]['enabled'] = true;
+                    if (scrollBtween.tweenIndex[anim_id] !== null) {
+                        scrollBtween.tweenIndex[anim_id]['enabled'] = true;
+                    }
                 }
             }
         }
@@ -237,7 +239,9 @@ let scrollBtween = {
         if (id === undefined) {
             for (const anim_id in scrollBtween.tweenIndex) {
                 if (Object.hasOwnProperty.call(scrollBtween.tweenIndex, anim_id)) {
-                    scrollBtween.tweenIndex[anim_id]['enabled'] = false;
+                    if (scrollBtween.tweenIndex[anim_id] !== null) {
+                        scrollBtween.tweenIndex[anim_id]['enabled'] = false;
+                    }
                 }
             }
         }

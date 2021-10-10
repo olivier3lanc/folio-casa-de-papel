@@ -13,7 +13,7 @@ const casaDePapel = {
         return result;
     },
     getNextScene: function() {
-        const current_id = this.getCurrentScene();
+        const current_id = casaDePapel.getCurrentScene();
         const el_current_scene = document.querySelector('#'+current_id);
         let result = '';
         if (el_current_scene !== null) {
@@ -28,16 +28,41 @@ const casaDePapel = {
         return result;
     },
     playNextScene: function() {
-        const current_id = this.getCurrentScene();
-        const el_current_scene = document.querySelector('#'+current_id);
-        if (el_current_scene !== null) {
-            const el_next_scene = el_current_scene.nextElementSibling;
-            // If null it is the last scene
-            if (el_next_scene === null) {
+        const next_scene_id = casaDePapel.getNextScene();
+        if (next_scene_id === null) {
 
-            } else {
-                this.playScene(el_next_scene.id);
-            }
+        } else {
+            casaDePapel.playScene(next_scene_id);
+        }
+    },
+    enableAnimations: function(el_scene) {
+        if (typeof el_scene == 'object') {
+            el_scene.querySelectorAll('[scroll-frames-disabled]').forEach(function(el) {
+                const scroll_frames_id = el.getAttribute('scroll-frames-disabled');
+                el.removeAttribute('scroll-frames-disabled');
+                el.setAttribute('scroll-frames', scroll_frames_id);
+            });
+            el_scene.querySelectorAll('[scroll-btween-disabled]').forEach(function(el) {
+                const scroll_btween_id = el.getAttribute('scroll-btween-disabled');
+                el.removeAttribute('scroll-btween-disabled');
+                el.setAttribute('scroll-btween', scroll_btween_id);
+            });
+        }
+    },
+    disableAnimations: function(el_scene) {
+        if (typeof el_scene == 'object') {
+            el_scene.querySelectorAll('[scroll-frames]').forEach(function(el) {
+                const scroll_frames_id = el.getAttribute('scroll-frames');
+                scrollFrames.destroy(scroll_frames_id);
+                el.removeAttribute('scroll-frames');
+                el.setAttribute('scroll-frames-disabled', scroll_frames_id);
+            });
+            el_scene.querySelectorAll('[scroll-btween]').forEach(function(el) {
+                const scroll_btween_id = el.getAttribute('scroll-btween');
+                scrollBtween.destroy(scroll_btween_id);
+                el.removeAttribute('scroll-btween');
+                el.setAttribute('scroll-btween-disabled', scroll_btween_id);
+            });
         }
     },
     playScene: function(id) {
@@ -55,41 +80,32 @@ const casaDePapel = {
                         el_ui.setAttribute('scroll-btween-disabled', el_ui.id);
                     }
                 });
+
                 // Hide and disable all scenes
                 document.querySelectorAll('main .cdp_scene').forEach(function(el) {
-                    el.classList.add('u-none');
-                    el.querySelectorAll('[scroll-frames]').forEach(function(el) {
-                        const scroll_frames_id = el.getAttribute('scroll-frames');
-                        scrollFrames.destroy(scroll_frames_id);
-                        el.removeAttribute('scroll-frames');
-                        el.setAttribute('scroll-frames-disabled', scroll_frames_id);
-                    });
-                    el.querySelectorAll('[scroll-btween]').forEach(function(el) {
-                        const scroll_btween_id = el.getAttribute('scroll-btween');
-                        scrollBtween.destroy(scroll_btween_id);
-                        el.removeAttribute('scroll-btween');
-                        el.setAttribute('scroll-btween-disabled', scroll_btween_id);
-                    });
+                    el.classList.add('u-none', 'u-transparent');
+                    casaDePapel.disableAnimations(el);
                 });
-                el_scene.querySelectorAll('[scroll-frames-disabled]').forEach(function(el) {
-                    const scroll_frames_id = el.getAttribute('scroll-frames-disabled');
-                    el.removeAttribute('scroll-frames-disabled');
-                    el.setAttribute('scroll-frames', scroll_frames_id);
-                });
-                el_scene.querySelectorAll('[scroll-btween-disabled]').forEach(function(el) {
-                    const scroll_btween_id = el.getAttribute('scroll-btween-disabled');
-                    el.removeAttribute('scroll-btween-disabled');
-                    el.setAttribute('scroll-btween', scroll_btween_id);
-                });
+                // Enable the specified
+                casaDePapel.enableAnimations(el_scene);
+
+                // Enable animations on the next scene
+                const el_next_scene = el_scene.nextElementSibling;
+                if (el_next_scene !== null) {
+                    el_next_scene.classList.remove('u-none');
+                    casaDePapel.enableAnimations(el_next_scene);
+                }
+
                 window.scrollTo({
                     top: 0,
                     left: 0
                 });
+
                 // Update view
                 scrollBtween.update();
                 scrollBtween.updateTweenerValues();
                 scrollFrames.update();
-                el_scene.classList.remove('u-none');
+                el_scene.classList.remove('u-none', 'u-transparent');
                 // Enable thumbnail
                 const el_nav = document.querySelector('#'+id+'_nav');
                 if (el_nav !== null) {

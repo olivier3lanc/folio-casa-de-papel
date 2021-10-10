@@ -12,8 +12,8 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
         data-transform="translateX(-50%) translateY(-50%) scale(|1 to 0.2|)"
         data-top="calc(|50 to 100|% - |0 to 23|px)"
         data-left="calc(|0:50 to 50:50 to 100:0|% + |0 to 40|px)">
-        <span class="">La Casa</span>
-        <span class="c-grid m-middle">
+        <span class="u-ws-nowrap">La Casa</span>
+        <span class="c-grid m-middle m-nowrap">
             <span class="u-fs-xl u-mr-xxs u-p-de u-bc-primary u-lh-1 u-lsp-none">de</span>Papel
         </span>
     </h1>
@@ -21,21 +21,21 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
 
 <main class="u-h-100vh">
     {% for scene in site.data.scenes %}
-        <article id="{{scene.id}}" class="cdp_scene {% if forloop.first == false %}u-none{% endif %}">
+        <article id="{{scene.id}}" class="cdp_scene u-transition-opacity {% if forloop.first %}{% else %}{% if forloop.index == 2 %}u-transparent{% else %}u-none{% endif %}{% endif %}">
             <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
-                    scroll-frames{% if forloop.first == false %}-disabled{% endif %}="{{scene.id}}"
+                    scroll-frames{% if forloop.index > 2 %}-disabled{% endif %}="{{scene.id}}"
                     scroll-frames-detector="cdp_scene_detector"
                     data-json="json/{{scene.id}}.json">
             </figure>
             {% for element in scene.elements %}
-                <p class="{{element.main_class}}"
-                    scroll-btween{% if forloop.first == false %}-disabled{% endif %}="{{scene.id}}"
+                <p  class="{{element.main_class}}"
+                    scroll-btween{% if forloop.index > 2 %}-disabled{% endif %}="{{scene.id}}"
                     scroll-btween-detector="cdp_scene_detector"
                     {% for tween in element.main_tweens %} data-{{tween.property}}="{{tween.value}}"{% endfor %}>
                     {{element.main_text}}
                     {% for inner_element in element.inner_elements %}
                         <span   class="{{inner_element.class}}"
-                                scroll-btween{% if forloop.first == false %}-disabled{% endif %}="{{inner_element.id}}"
+                                scroll-btween{% if forloop.index > 2 %}-disabled{% endif %}="{{scene.id}}_{{forloop.index}}"
                                 scroll-btween-detector="cdp_scene_detector"
                                 {% for tween in inner_element.tweens %} data-{{tween.property}}="{{tween.value}}"{% endfor %}>{{inner_element.text}}</span>
                     {% endfor %}

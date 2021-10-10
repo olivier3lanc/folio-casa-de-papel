@@ -841,7 +841,8 @@ $briks-utilities: (
         enabled: true,
         prefix: 'transition-',
         names-and-values: (
-            'none': none
+            'none': none,
+            'opacity': opacity 500ms
         ),
         additional-names-and-values: (),
         responsive: false

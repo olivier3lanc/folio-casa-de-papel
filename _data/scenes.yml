@@ -9,20 +9,73 @@
         - property: transform
           value: 'rotate(15deg) translateX(|0 to 100|%)'
       inner_elements:
-        - id: cdp_ursula_text_2
-          text: texte plus
+        - text: texte plus
           class: c-position m-absolute m-bottom-100 u-block
-        - id: cdp_ursula_line_1
-          # text: text 1
+        - # text: text 1
           class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
           tweens:
             - property: width
               value: '|0 to 120|%'
-        - id: cdp_ursula_line_2
-          # text: text 2
+        - # text: text 2
           class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
           tweens:
             - property: top
               value: '-150|%'
             - property: height
               value: '|0 to 400|%'
+- id: cdp_itziar
+  elements:
+    - main_text: Alba Flores
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateX(-50%) translateY(|0 to -100|%)'
+      inner_elements:
+        - text: Nairobi
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_alvaro
+  elements:
+    - main_text: Álvaro Morte
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateX(-50%) translateY(|0 to -100|%)'
+      inner_elements:
+        - text: Nairobi
+          class: c-position m-absolute m-bottom-100 u-block
+        - class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_final
+  elements:
+    - main_text: La Casa de Papeel
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateX(-50%) translateY(|-100 to -100|%)'
