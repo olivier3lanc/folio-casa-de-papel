@@ -1,0 +1,11 @@
+---
+---
+[
+{% assign pass = true %}
+{% for i in (0..106) %}
+    {% if pass %}
+        { "url": "{{site.url}}{{site.baseurl}}/img/ursula_jpg/casa_credit_ursula_{{i}}.jpg" }{% if forloop.last == false %},{% endif %}
+    {% endif %}
+    {% if pass == true %}{% assign pass = false %}{% else %}{% assign pass = true %}{% endif %}
+{% endfor %}
+]

@@ -86,8 +86,8 @@ playground:
         #- /example-project/css/tailwind.min.css
         - /css/normalize.css
         - /css/casa.css
-        - https://cdn.plyr.io/3.6.8/plyr.css
-        - /css/plyr-theme.css
+        #- https://cdn.plyr.io/3.6.8/plyr.css
+        #- /css/plyr-theme.css
     # Javascript in <head>. Can be either:
     # Relative URL from site root starting with slash /
     # Absolute URL starting with 'http'
@@ -102,8 +102,8 @@ playground:
         - /js/scroll-frames.js
         - /js/scroll-btween.js
         - /js/casadepapel.js
-        - /js/plyr.js
-        - /js/audio.js
+        #- /js/plyr.js
+        #- /js/audio.js
 
 # Settings for the assets layout
 assets:

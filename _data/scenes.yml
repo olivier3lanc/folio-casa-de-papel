@@ -9,7 +9,7 @@
         - property: transform
           value: 'rotate(15deg) translateX(|0 to 100|%)'
       inner_elements:
-        - text: texte plus
+        - text: Tokyo
           class: c-position m-absolute m-bottom-100 u-block
         - # text: text 1
           class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
@@ -23,7 +23,7 @@
               value: '-150|%'
             - property: height
               value: '|0 to 400|%'
-- id: cdp_itziar
+- id: cdp_albamiguel
   elements:
     - main_text: Alba Flores
       main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
@@ -57,7 +57,7 @@
         - property: transform
           value: 'translateX(-50%) translateY(|0 to -100|%)'
       inner_elements:
-        - text: Nairobi
+        - text: Professor
           class: c-position m-absolute m-bottom-100 u-block
         - class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
           tweens:
@@ -70,12 +70,157 @@
               value: '-150|%'
             - property: height
               value: '|0 to 400|%'
+- id: cdp_pacopedro
+  elements:
+    - main_text: Pedro Alonso
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateX(-50%) translateY(|0 to -100|%)'
+      inner_elements:
+        - text: Berlin
+          class: c-position m-absolute m-bottom-100 u-block
+        - class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+
+- id: cdp_migue
+  elements:
+    - main_text: Miguel Herrán #Rio
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateX(-50%) translateY(|0 to -100|%)'
+      inner_elements:
+        - text: Rio
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_ykiti
+  elements:
+    - main_text: Jaime Lorente #Denver
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateY(-50%) translateX(|0 to -30|%)'
+      inner_elements:
+        - text: Denver
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_beretta
+  elements:
+    - main_text: Paco Tous #Moscou
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateY(|0 to -100|%)'
+      inner_elements:
+        - text: Moscou
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_cristina
+  elements:
+    - main_text: Joseph Whimms #Oslo
+      main_class: c-position m-fixed m-top-50 m-left-lg u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateY(|0 to 50|%)'
+      inner_elements:
+        - text: Oslo
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
+- id: cdp_esther
+  elements:
+    - main_text: Darko Peric #Helsinki
+      main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
+      main_tweens:
+        - property: opacity
+          value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
+        - property: transform
+          value: 'translateY(|0 to -30|%)'
+      inner_elements:
+        - text: Helsinki
+          class: c-position m-absolute m-bottom-100 u-block
+        - # text: text 1
+          class: c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block
+          tweens:
+            - property: width
+              value: '|0 to 120|%'
+        - # text: text 2
+          class: c-position m-absolute m-right-0 u-bl-large-solid-primary u-block
+          tweens:
+            - property: top
+              value: '-150|%'
+            - property: height
+              value: '|0 to 400|%'
 - id: cdp_final
   elements:
-    - main_text: La Casa de Papeel
+    - main_text: La Casa de Papel
       main_class: c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none
       main_tweens:
         - property: opacity
           value: '|0:0.3 to 20:1 to 80:1 to 100:0.3|'
         - property: transform
           value: 'translateX(-50%) translateY(|-100 to -100|%)'
+  

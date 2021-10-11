@@ -1,6 +1,16 @@
 const casaDePapel = {
     defaults: {
-        firstSceneId: 'cdp_executives'
+        firstSceneId: 'cdp_executives',
+        el_audio_player: document.getElementById('cdp_audio_player')
+    },
+    playPauseAudio: function() {
+        if (this.defaults.el_audio_player !== null) {
+            if (this.defaults.el_audio_player.paused) {
+                this.defaults.el_audio_player.play();
+            } else {
+                this.defaults.el_audio_player.pause();
+            }
+        }
     },
     // Returns the current scene id
     // Empty string if none
