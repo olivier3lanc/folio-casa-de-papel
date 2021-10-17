@@ -1,0 +1,35 @@
+---
+layout: libdoc/playground
+---
+
+<article id="cdp_executives" class="cdp_scene u-h-100vh">
+    <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
+            style="will-change: background-image, background-size;"
+            scroll-frames="cdp_executives"
+            scroll-frames-detector="cdp_scene_detector"
+            data-json="json/cdp_executives.json">
+    </figure>
+    
+</article>
+
+<div id="cdp_scene_detector"></div>
+<div class="u-h-100vh"></div>
+
+<a href="cdp_ursula.html" class="c-btn u-relative u-mb-xxl u-block" id="cdp_next_scene">Next</a>
+
+<script>
+    const el_loader = window.parent.document.querySelector('#cdp_loader');
+    if (el_loader !== null) {
+        window.addEventListener('load', function() {
+            el_loader.classList.add('u-transparent');
+        });
+        document.querySelector('#cdp_next_scene').addEventListener('click', function(e) {
+            e.preventDefault();
+            el_loader.classList.remove('u-transparent');
+            const url = e.target.getAttribute('href');
+            setTimeout(function() {
+                window.location.href = url;
+            }, 1000);
+        })
+    }
+</script>

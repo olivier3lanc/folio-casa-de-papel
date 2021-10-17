@@ -3,9 +3,8 @@
 [
 {% assign pass = true %}
 {% for i in (0..180) %}
-    {% if pass %}
-        { "url": "{{site.url}}{{site.baseurl}}/img/final/casa_credit_final_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
-    {% endif %}
+{ "url": "{{site.url}}{{site.baseurl}}/img/final/casa_credit_final_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
+    {% if pass %}{% endif %}
     {% if pass == true %}{% assign pass = false %}{% else %}{% assign pass = true %}{% endif %}
 {% endfor %}
 ]
