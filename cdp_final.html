@@ -8,18 +8,24 @@ layout: libdoc/playground
             scroll-frames-detector="cdp_scene_detector"
             data-json="json/cdp_final.json">
     </figure>
-    
-        <p  class="c-position m-fixed m-top-50 m-left-50 u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none"
-            scroll-btween="cdp_final"
-            scroll-btween-detector="cdp_scene_detector"
-             data-opacity="|0:0.3 to 20:1 to 80:1 to 100:0.3|" data-transform="translateX(-50%) translateY(|-100 to -100|%)">
-            La Casa de Papel
-            
-        </p>
-    
+
+    <p  class="c-position m-fixed m-top-0 m-left-50 m-anchor-bottom-center c-grid m-nowrap u-m-none u-c-primary u-tt-uppercase u-fs-xxl u-z-100 u-lh-1"
+        scroll-btween="cdp_final" 
+        scroll-btween-detector="cdp_scene_detector" 
+        data-top="|0 to 40|%">
+        <span class="u-mr-xxs">La</span>
+        <span>Casa</span>
+        <span class="c-grid m-center m-middle u-bc-primary-rev u-c-primary-max u-pl-xs u-pr-xs u-mr-xs u-ml-xs"><span class="u-fs-xl">de</span></span>
+        <span>Papel</span>
+    </p>
 </article>
 
 <div id="cdp_scene_detector"></div>
 <div class="u-h-100vh"></div>
 
-<a href="#" class="c-btn u-relative u-mb-xxl u-block">Next</a>
+<nav class="c-grid m-center m-nowrap u-mb-xxl u-relative">
+    <a href="cdp_esther.html" class="c-btn" id="cdp_prev_scene">Previous</a>
+    <a href="#" class="c-btn u-faded u-pe-none" id="cdp_next_scene">Next</a>
+</nav>
+
+<script src="js/iframe.js"></script>

@@ -35,8 +35,8 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
         {% for scene in site.data.scenes %}
             <a  id="{{scene.id}}_nav" 
                 class=""
-                href="#" 
-                title="Scène {{forloop.index}}" 
+                href="{{scene.id}}.html" 
+                title="Scene {{forloop.index}}" 
                 onclick="casaDePapel.playScene('{{scene.id}}')">{{forloop.index}}</a>
         {% endfor %}
     </div>

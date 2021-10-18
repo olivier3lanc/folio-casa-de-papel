@@ -1,7 +1,7 @@
 ---
 layout: libdoc/playground
 ---
-<article id="cdp_ursula" class="cdp_scene u-h-100vh">
+<article id="cdp_ursula" class="u-h-100vh">
     <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
         style="will-change: background-image, background-size;" scroll-frames="cdp_ursula_jpg"
         scroll-frames-detector="cdp_scene_detector" data-json="json/cdp_ursula_jpg.json">
@@ -28,21 +28,9 @@ layout: libdoc/playground
 <div id="cdp_scene_detector"></div>
 <div class="u-h-100vh"></div>
 
-<a href="cdp_albamiguel.html" class="c-btn u-relative u-mb-xxl u-block" id="cdp_next_scene">Next</a>
+<nav class="c-grid m-center m-nowrap u-mb-xxl u-relative">
+    <a href="cdp_executives.html" class="c-btn" id="cdp_prev_scene">Previous</a>
+    <a href="cdp_albamiguel.html" class="c-btn" id="cdp_next_scene">Next</a>
+</nav>
 
-<script>
-    const el_loader = window.parent.document.querySelector('#cdp_loader');
-    if (el_loader !== null) {
-        window.addEventListener('load', function() {
-            el_loader.classList.add('u-transparent');
-        });
-        document.querySelector('#cdp_next_scene').addEventListener('click', function(e) {
-            e.preventDefault();
-            el_loader.classList.remove('u-transparent');
-            const url = e.target.getAttribute('href');
-            setTimeout(function() {
-                window.location.href = url;
-            }, 1000);
-        })
-    }
-</script>
+<script src="js/iframe.js"></script>
