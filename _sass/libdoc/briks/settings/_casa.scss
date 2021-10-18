@@ -104,7 +104,11 @@ Y88b  d88P Y88b.    888    Y8b.     Y8b.     888  888           X88 888  d88P   
     );
     SCREEN SIZES
 */
-$briks-screen-sizes: ();
+$briks-screen-sizes: (
+    sm: 0,
+    md: 768,
+    xl: 1440
+);
 
 /*
 8888888888                888             
@@ -613,6 +617,7 @@ $briks-utilities: (
             'short': -0.01em,
             'title': -0.04em,
             'large': 0.1em,
+            'xlarge': 0.3em,
         ),
         additional-names-and-values: (),
         responsive: false
