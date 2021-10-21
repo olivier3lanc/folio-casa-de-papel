@@ -933,6 +933,25 @@ Y88b  d88P Y88..88P 888  888  888 888 d88P Y88..88P 888  888 Y8b.     888  888 Y
     );
 */
 $briks-components-generic: (
+    container: (
+        enabled: true,
+        responsive: true,
+        defaults: (
+            margin: auto,
+            width: 100%
+        ),
+        modifiers: (
+            w-xs: (
+                max-width: 400px
+            ),
+            w-sm: (
+                max-width: 600px
+            ),
+            w-md: (
+                max-width: 800px
+            )
+        )
+    ),
     btn: (
         enabled: true,
         responsive: false,
@@ -1040,6 +1059,49 @@ $briks-components-generic: (
             nowrap: (
                 flex-wrap: nowrap
             )
+        )
+    ),
+    spacing: (
+        enabled: true,
+        responsive: true,
+        defaults: (),
+        modifiers: (
+            w-12: (
+                width: 100%
+            ),
+            w-11: (
+                width: 91.6666%
+            ),
+            w-10: (
+                width: 83.3333%
+            ),
+            w-9: (
+                width: 75%
+            ),
+            w-8: (
+                width: 66.6666%
+            ),
+            w-7: (
+                width: 58.3333%
+            ),
+            w-6: (
+                width: 50%
+            ),
+            w-5: (
+                width: 41.6666%
+            ),
+            w-4: (
+                width: 33.3333%
+            ),
+            w-3: (
+                width: 25%
+            ),
+            w-2: (
+                width: 16.6666%
+            ),
+            w-1: (
+                width: 8.3333%
+            ),
         )
     ),
     ar: (
