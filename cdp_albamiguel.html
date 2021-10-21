@@ -9,27 +9,30 @@ layout: libdoc/playground
         data-json="json/cdp_albamiguel.json">
     </figure>
 
-    <p class="c-position m-fixed m-top-50 m-left-50 m-anchor-middle-center u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-ws-nowrap u-inline-block u-p-none u-pb-md u-pr-md u-pe-none u-m-none"
+    <p class="c-position m-fixed m-top-50 m-left-50 m-anchor-middle-center u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-ws-nowrap u-inline-block u-p-none u-pt-md u-pr-md u-pe-none u-m-none"
         scroll-btween="cdp_scene" 
         scroll-btween-detector="cdp_scene_detector"
         data-opacity="|0:0 to 20:1 to 100:1|" 
         data-transform="translateX(-50%) translateY(|-50 to -100|%)"
+        style="opacity: 0;"
         u-fs-lg="sm" 
-        u-pb-sm="sm" 
+        u-pt-sm="sm" 
         u-pr-sm="sm">
         Alba Flores
 
-        <span class="c-position m-absolute m-bottom-100 m-right-0 u-block u-pr-md u-pb-xs u-fs-md u-lsp-xlarge" 
+        <span class="c-position m-absolute m-bottom-100 m-right-0 u-block u-pr-md u-pb-sm u-fs-md" 
             scroll-btween="cdp_scene_1"
             scroll-btween-detector="cdp_scene_detector"
+            data-opacity="|0:0 to 100:1|"
             u-pr-sm="sm"
             u-pb-xxs="sm"
             u-fs-sm="sm">Nairobi</span>
 
-        <span class="c-position m-absolute m-bottom-0 m-left-0 u-bb-large-solid-primary u-block"
+        <span class="c-position m-absolute m-top-0 u-bt-large-solid-primary u-block" 
             scroll-btween="cdp_scene_2" 
             scroll-btween-detector="cdp_scene_detector"
-            data-width="|0 to 120|%"></span>
+            data-width="|0 to 120|%"
+            data-right="|-40 to 0|%"></span>
 
         <span class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block" 
             scroll-btween="cdp_scene_3"
@@ -43,8 +46,8 @@ layout: libdoc/playground
 <div class="u-h-100vh"></div>
 
 <nav class="c-grid m-center m-nowrap u-mb-xxl u-relative">
-    <a href="cdp_ursula.html" class="c-btn" id="cdp_prev_scene">Previous</a>
-    <a href="cdp_alvaro.html" class="c-btn" id="cdp_next_scene">Next</a>
+    <a href="cdp_ursula.html" class="c-btn u-mr-sm" id="cdp_prev_scene">Previous</a>
+    <a href="cdp_alvaro.html" class="c-btn u-ml-sm" id="cdp_next_scene">Next</a>
 </nav>
 
 <script src="js/iframe.js"></script>

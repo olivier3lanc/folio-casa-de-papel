@@ -4,50 +4,34 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
 # unlisted: true
 # iframe_mode: true
 ---
+    
+<h1 class="c-position m-fixed m-bottom-md m-right-md u-m-none u-c-primary-max u-fs-lg u-lh-title u-lsp-title u-z-100"
+    m-right-xs="sm">
+    <a  href="{{site.url}}{{site.baseurl}}"
+        id="cdp_nav_home"
+        class="u-c-primary-max u-td-none">
+        <span class="u-ws-nowrap">La Casa</span>
+        <span class="c-grid m-middle m-nowrap">
+            <span class="u-fs-sm u-p-xxs u-bc-primary u-lh-1 u-lsp-none">de</span>Papel
+        </span>
+    </a>
+</h1>
 
 <main class="u-h-100vh">
-    <iframe src="cdp_executives.html" class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none u-b-none"></iframe>
+    <iframe src="cdp_executives.html" id="cdp_scenes" class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none u-b-none"></iframe>
     <div id="cdp_loader" class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-transition-opacity u-bc-primary u-pe-none"></div>
 </main>
 
-
-
-
-<nav class="c-position m-fixed m-bottom-0 m-left-0 c-grid m-nowrap u-w-100 u-z-1 u-bt-large-solid-primary">
-    <h1 class="u-m-none u-c-primary-max u-fs-lg u-lh-title u-lsp-title u-z-100 u-p-xs">
-        <a  href="{{site.url}}{{site.baseurl}}"
-            class="u-c-primary-max u-td-none">
-            <span class="u-ws-nowrap">La Casa</span>
-            <span class="c-grid m-middle m-nowrap">
-                <span class="u-fs-sm u-p-xxs u-bc-primary u-lh-1 u-lsp-none">de</span>Papel
-            </span>
-        </a>
-    </h1>
-    <!-- <div class="c-grid m-middle u-pl-sm u-pr-sm u-pt-xs u-pb-xs u-lh-1">
-        <a href="https://www.youtube.com/watch?v=F1oHBcTdKL4" class="u-ff-lead-2 u-fs-xs" target="_blank">
-            <span class="u-block u-ws-nowrap">My Life Is Going On</span>
-            <span>Cecilia Krull</span></a>
-    </div> -->
-
-    <button onclick="casaDePapel.playPauseAudio()">play pause</button>
-    
-    <div class="c-grid">
-        {% for scene in site.data.scenes %}
-            <a  id="{{scene.id}}_nav" 
-                class=""
-                href="{{scene.id}}.html" 
-                title="Scene {{forloop.index}}" 
-                onclick="casaDePapel.playScene('{{scene.id}}')">{{forloop.index}}</a>
-        {% endfor %}
-    </div>
-</nav>
+<button class="c-position m-fixed m-bottom-md m-left-md c-btn" 
+        id="cdp_play_pause" 
+        m-left-xs="sm"
+        onclick="casaDePapel.playPauseAudio()">play</button>
 <audio id="cdp_audio_player">
     <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
 </audio>
 
-<script>
-    // const el_loader = document.querySelector('#cdp_loader');
-    // window.addEventListener('load', function() {
-    //     el_loader.classList.add('u-transparent');
-    // });
-</script>
+<!-- <div class="c-grid m-middle u-pl-sm u-pr-sm u-pt-xs u-pb-xs u-lh-1">
+    <a href="https://www.youtube.com/watch?v=F1oHBcTdKL4" class="u-ff-lead-2 u-fs-xs" target="_blank">
+        <span class="u-block u-ws-nowrap">My Life Is Going On</span>
+        <span>Cecilia Krull</span></a>
+</div> -->
