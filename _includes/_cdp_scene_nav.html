@@ -1,0 +1,14 @@
+
+<div id="cdp_scene_detector"></div>
+<div class="u-h-100vh"></div>
+
+<nav class="c-position m-fixed m-top-100 m-left-0 c-grid m-center m-nowrap u-w-100"
+    scroll-btween="cdp_nav"
+    scroll-btween-detector="cdp_scene_detector" 
+    data-top="calc(100% - |0:0 to 90:0 to 100:200|px)"
+    data-opacity="|0:0 to 95:0 to 100:1|">
+    <a href="{{include.cdp_prev_scene_href}}" class="{% if include.cdp_prev_scene_href %}c-btn m-thin m-transparent u-mr-sm{% else %}u-none{% endif %}" id="cdp_prev_scene">{{include.cdp_prev_scene_text|default:'Previous'}}</a>
+    <a href="{{include.cdp_next_scene_href}}" class="{% if include.cdp_next_scene_href %}c-btn m-thin u-ml-sm{% else %}u-none{% endif %}" id="cdp_next_scene">{{include.cdp_next_scene_text|default:'Next'}}</a>
+</nav>
+
+<script src="js/iframe.js"></script>

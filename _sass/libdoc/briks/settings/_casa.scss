@@ -419,7 +419,7 @@ $briks-shadows: ();
 $briks-backgrounds: (
     // search: 'right 20px center / 16px no-repeat url(data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8Y2lyY2xlIGN4PSIxMSIgY3k9IjExIiByPSI4IiAvPgogIDxsaW5lIHgxPSIyMSIgeTE9IjIxIiB4Mj0iMTYuNjUiIHkyPSIxNi42NSIgLz4KPC9zdmc+Cg==)',
     // loading: 'center no-repeat 'my-color(primary-edge) 'url(data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIxMCIgLz4KICA8cG9seWxpbmUgcG9pbnRzPSIxMiA2IDEyIDEyIDE2IDE0IiAvPgo8L3N2Zz4K)',
-    // play: 'center no-repeat 'my-color(primary-edge) 'url(data:image/svg+xml;base64,PHN2ZwogIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICB3aWR0aD0iMjQiCiAgaGVpZ2h0PSIyNCIKICB2aWV3Qm94PSIwIDAgMjQgMjQiCiAgZmlsbD0ibm9uZSIKICBzdHJva2U9ImN1cnJlbnRDb2xvciIKICBzdHJva2Utd2lkdGg9IjIiCiAgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIgogIHN0cm9rZS1saW5lam9pbj0icm91bmQiCj4KICA8cG9seWdvbiBwb2ludHM9IjUgMyAxOSAxMiA1IDIxIDUgMyIgLz4KPC9zdmc+Cg==)',
+    origami: 'center / contain no-repeat 'my-color(primary-rev) 'url(../img/origami.svg)',
     // stripes: 'repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAFUlEQVQImWNgQAKrVq36TyqHgYEBAJS9C/UfuuB+AAAAAElFTkSuQmCC)',
     // select: 'right 0px top 50% / 60px 10% no-repeat url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjUxIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgNTEgMzIiPjx0aXRsZT5jaGV2cm9uLWRvd248L3RpdGxlPjxwYXRoIGQ9Ik00NS4yMjcgMGw1Ljk3MyA2LjA1NC0yNS42IDI1Ljk0Ni0yNS42LTI1Ljk0NiA1Ljk3My02LjA1NCAxOS42MjcgMTkuODkyeiI+PC9wYXRoPjwvc3ZnPg==)',
     // checkbox: '#333 center / 60% 60% no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMSAxMCIgd2lkdGg9IjExIiBoZWlnaHQ9IjEwIj48c3R5bGU+dHNwYW4geyB3aGl0ZS1zcGFjZTpwcmUgfS5zaHAwIHsgZmlsbDogbm9uZTtzdHJva2U6ICNmZmZmZmY7c3Ryb2tlLXdpZHRoOiAyIH0gPC9zdHlsZT48cGF0aCBpZD0iTGF5ZXIiIGNsYXNzPSJzaHAwIiBkPSJNMSw1bDMuNSwzbDUuNSwtNyIgLz48L3N2Zz4=)',
@@ -441,6 +441,15 @@ Y88b. .d88P Y88b.  888 888 888 Y88b.  888 Y8b.          X88
 
 */
 $briks-utilities: (
+    animation: (
+        enabled: true,
+        prefix: 'anim-',
+        names-and-values: (
+            blink: 0.8s linear 0s infinite alternate blink
+        ),
+        additional-names-and-values: (),
+        responsive: false
+    ),
     background: (
         enabled: true,
         prefix: 'bg-',
@@ -961,7 +970,7 @@ $briks-components-generic: (
             box-sizing: border-box,
             transition: all 300ms,
             display: inline-flex,
-            justify-content: space-between,
+            justify-content: center,
             align-items: center,
             line-height: 1.1em,
             text-decoration: none,
@@ -973,6 +982,7 @@ $briks-components-generic: (
             font-family: my-font-family(lead),
             font-size: my-font-size(sm),
             text-transform: uppercase,
+            background-image: url('../img/5.svg'),
             // outline: none,
             pseudo-elements: (
                 before: (
@@ -1020,6 +1030,21 @@ $briks-components-generic: (
             ),
         ),
         modifiers: (
+            thin: (
+                pseudo-elements: (
+                    before: (
+                        border-left: my-border(thin-solid-primary),
+                        border-top: my-border(thin-solid-primary),
+                    ),
+                    after: (
+                        border-right: my-border(thin-solid-primary),
+                        border-bottom: my-border(thin-solid-primary),
+                    )
+                )
+            ),
+            'transparent': (
+                background-image: none
+            )
         )
     ),
     grid: (

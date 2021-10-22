@@ -18,12 +18,17 @@ a {
         color: my-color(primary-max);
     }
 }
+html {
+    background-color: my-color(primary-rev);
+}
 body {
     font-family: my-font-family(lead);
     font-size: my-font-size(md);
     color: my-color(primary-max);
     background-color: my-color(primary-rev);
     line-height: 1.6em;
+    opacity: 0;
+    transition: opacity 1s;
 }
 h1 {
     font-size: my-font-size(xxl);
@@ -73,5 +78,15 @@ hr {
     }
     pre {
         font-size: my-font-size(xs);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
     }
 }

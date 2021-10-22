@@ -1,7 +1,7 @@
 ---
 layout: libdoc/playground
 ---
-<article id="cdp_ursula" class="u-h-100vh">
+<article class="u-h-100vh">
     <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
         style="will-change: background-image, background-size;" 
         scroll-frames="cdp_scene"
@@ -44,12 +44,5 @@ layout: libdoc/playground
     </p>
 
 </article>
-<div id="cdp_scene_detector"></div>
-<div class="u-h-100vh"></div>
 
-<nav class="c-grid m-center m-nowrap u-mb-xxl u-relative">
-    <a href="cdp_executives.html" class="c-btn u-mr-sm" id="cdp_prev_scene">Previous</a>
-    <a href="cdp_albamiguel.html" class="c-btn u-ml-sm" id="cdp_next_scene">Next</a>
-</nav>
-
-<script src="js/iframe.js"></script>
+{% include _cdp_scene_nav.html cdp_prev_scene_href='cdp_executives.html' cdp_next_scene_href='cdp_albamiguel.html' %}

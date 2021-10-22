@@ -43,12 +43,4 @@ layout: libdoc/playground
     </p>
 </article>
 
-<div id="cdp_scene_detector"></div>
-<div class="u-h-100vh"></div>
-
-<nav class="c-grid m-center m-nowrap u-mb-xxl u-relative">
-    <a href="cdp_albamiguel.html" class="c-btn u-mr-sm" id="cdp_prev_scene">Previous</a>
-    <a href="cdp_pacopedro.html" class="c-btn u-ml-sm" id="cdp_next_scene">Next</a>
-</nav>
-
-<script src="js/iframe.js"></script>
+{% include _cdp_scene_nav.html cdp_prev_scene_href='cdp_albamiguel.html' cdp_next_scene_href='cdp_pacopedro.html' %}
