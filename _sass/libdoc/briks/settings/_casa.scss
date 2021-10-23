@@ -445,7 +445,9 @@ $briks-utilities: (
         enabled: true,
         prefix: 'anim-',
         names-and-values: (
-            blink: 0.8s linear 0s infinite alternate blink
+            blink: 0.8s linear 0s infinite alternate blink,
+            left-to-right: 3s linear 0s infinite alternate left_to_right,
+            bottom-to-top: 4s linear 0s infinite alternate bottom_to_top,
         ),
         additional-names-and-values: (),
         responsive: false
@@ -1091,6 +1093,9 @@ $briks-components-generic: (
         responsive: true,
         defaults: (),
         modifiers: (
+            maxw-300: (
+                max-width: 300px
+            ),
             w-12: (
                 width: 100%
             ),
