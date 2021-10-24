@@ -21,11 +21,11 @@ let casaDePapel = {
         if (this.defaults.el_audio_player !== null && this.defaults.el_play_pause_button !== null) {
             if (this.defaults.el_audio_player.paused) {
                 this.defaults.el_audio_player.play();
-                this.defaults.el_play_pause_button.innerHTML = 'Pause';
+                this.defaults.el_play_pause_button.innerHTML = '<span class="c-shape m-pause"></span>';
                 window.cdp_audio_player_paused = false;
             } else {
                 this.defaults.el_audio_player.pause();
-                this.defaults.el_play_pause_button.innerHTML = 'Play';
+                this.defaults.el_play_pause_button.innerHTML = '<span class="c-shape m-play"></span>';
                 window.cdp_audio_player_paused = true;
             }
         }

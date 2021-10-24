@@ -110,3 +110,13 @@ hr {
         left: 100%;
     }
 }
+
+@keyframes mousewheel {
+    from {
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    to {
+        transform: translateX(-50%) translateY(50%);
+    }
+}

@@ -330,6 +330,10 @@ $briks-borders: (
     none: none,
     thin-solid-primary: 1px solid my-color(primary),
     large-solid-primary: 3px solid my-color(primary),
+    thin-solid-primary-max: 1px solid my-color(primary-max),
+    thin-solid-primary-rev: 1px solid my-color(primary-rev),
+    large-solid-primary-max: 3px solid my-color(primary-max),
+    large-solid-primary-rev: 3px solid my-color(primary-rev),
 );
 
 /*
@@ -944,6 +948,63 @@ Y88b  d88P Y88..88P 888  888  888 888 d88P Y88..88P 888  888 Y8b.     888  888 Y
     );
 */
 $briks-components-generic: (
+    shape: (
+        enabled: true,
+        responsive: false,
+        defaults: (
+            display: inline-block
+        ),
+        modifiers: (
+            mouse: (
+                width: 1em,
+                height: 1.8em,
+                border: my-border(large-solid-primary-max),
+                border-radius: my-border-radius(max),
+                position: relative,
+                pseudo-elements: (
+                    before: (
+                        content: '',
+                        display: block,
+                        position: absolute,
+                        width: 0.3em,
+                        height: 0.3em,
+                        top: 0.3em,
+                        left: 50%,
+                        animation: 0.7s linear 0s infinite alternate mousewheel,
+                        transform: translateX(-50%) translateY(-50%),
+                        background-color: my-color(primary-max),
+                        border-radius: my-border-radius(max)
+                    )
+                )
+            ),
+            play: (
+                width: 0,
+                height: 0,
+                border-style: solid,
+                border-color: transparent transparent transparent my-color(primary),
+                border-width: 0.5em 0em 0.5em 1em,
+                transform: translateX(16%),
+            ),
+            pause: (
+                display: inline-flex,
+                justify-content: space-between,
+                width: 1em,
+                height: 1em,
+                pseudo-elements: (
+                    before: (
+                        content: '',
+                        background-color: my-color(primary),
+                        width: 40%,
+                    ),
+                    after: (
+                        content: '',
+                        background-color: my-color(primary),
+                        width: 40%,
+                    )
+                )
+            ),
+        )
+    ),
     container: (
         enabled: true,
         responsive: true,
