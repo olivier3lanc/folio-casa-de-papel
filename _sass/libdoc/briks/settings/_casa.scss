@@ -619,7 +619,8 @@ $briks-utilities: (
             '100vh': 100vh,
             '200vh': 200vh,
             '80vh': 80vh,
-            '50vh': 50vh
+            '50vh': 50vh,
+            'smallbar': 12px
         ),
         additional-names-and-values: (),
         responsive: true
@@ -894,6 +895,7 @@ $briks-utilities: (
         names-and-values: (
             'auto': auto,
             '100': 100%,
+            'smallbar': 12px
         ),
         additional-names-and-values: (),
         responsive: false
@@ -1107,6 +1109,16 @@ $briks-components-generic: (
             ),
             'transparent': (
                 background-image: none
+            ),
+            noborder: (
+                pseudo-elements: (
+                    before: (
+                        display: none
+                    ),
+                    after: (
+                        display: none
+                    )
+                )
             )
         )
     ),
