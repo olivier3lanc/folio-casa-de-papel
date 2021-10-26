@@ -27,25 +27,26 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
     </div>
 </main>
 
-
-<div class="c-position m-fixed m-bottom-md m-left-md" m-bottom-xs="sm" m-left-xs="sm">
+<div m-bottom-xs="sm" m-left-xs="sm" class="c-position m-fixed m-bottom-md m-left-md c-grid">
     <button class="c-btn m-thin m-transparent u-p-sm" 
-            id="cdp_play_pause" 
-            onclick="casaDePapel.playPauseAudio()"><span class="c-shape m-play"></span></button>
-    <div id="cdp_audio_consent_modal" class="c-position m-absolute m-bottom-0 m-left-0 u-bc-primary-rev u-c-primary-max u-p-md u-b-thin-solid-primary" u-p-xs="sm">
-        <img src="img/waveform.svg" alt="Waveform" class="u-w-100 u-h-auto">
-        <p class="u-m-none u-fs-sm u-ff-lead-2 u-lh-1 u-mb-sm" u-fs-xs="sm">Best experience with the original soundtrack of Cecilia Krull</p>
-        <nav class="c-grid m-column">
-            <button class="c-btn m-transparent m-thin u-mb-sm" u-fs-xxs="sm" u-mb-xs="sm" onclick="casaDePapel.audioConsentModal('close')">dismiss</button>
-            <button class="c-btn m-thin" u-fs-xxs="sm" onclick="casaDePapel.playPauseAudio();casaDePapel.audioConsentModal('close')">ok sound on!</button>
-        </nav>
+        id="cdp_play_pause" 
+        onclick="casaDePapel.playPauseAudio();casaDePapel.audioConsentModal('close')">
+        <span class="c-shape m-play"></span>
+    </button>
+    <div id="cdp_audio_consent_modal" class="c-spacing m-w-6 c-grid m-middle u-bc-primary-rev u-p-sm u-relative" m-w-4="sm">
+        <p u-fs-xs="sm" class="u-m-none u-fs-sm u-ff-lead-2 u-lh-1">Best experience with the original soundtrack of Cecilia Krull</p>
+        <button class="c-position m-absolute m-top-0 m-right-0 c-btn m-thin m-transparent u-p-xxs u-fs-xs"
+            onclick="casaDePapel.audioConsentModal('close')">x</button>
     </div>
 </div>
+
 <audio id="cdp_audio_player">
     <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
 </audio>
 
 <button class="c-position m-fixed m-top-md m-right-md c-btn m-noborder m-transparent u-p-sm" 
+        m-top-sm="sm"
+        m-right-sm="sm"
         onclick="casaDePapel.toggleFullScreen()">
     <span id="cdp_icon_fs_enter">
         <span class="c-position m-absolute m-top-0 m-left-0 u-bt-thin-solid-primary u-bl-thin-solid-primary u-w-smallbar u-h-smallbar"></span>

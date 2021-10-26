@@ -3,8 +3,12 @@
 <div class="u-h-100vh"></div>
 
 <nav class="c-position m-relative m-botttom-xxl u-pb-xxl m-left-0 c-grid m-center m-nowrap u-w-100">
-    <a href="{{include.cdp_prev_scene_href}}" class="{% if include.cdp_prev_scene_href %}c-btn m-thin m-transparent {% if include.cdp_next_scene_href %}u-mr-sm{% endif %}{% else %}u-none{% endif %}" id="cdp_prev_scene">{{include.cdp_prev_scene_text|default:'Previous'}}</a>
-    <a href="{{include.cdp_next_scene_href}}" class="{% if include.cdp_next_scene_href %}c-btn m-thin {% if include.cdp_prev_scene_href %}u-ml-sm{% endif %}{% else %}u-none{% endif %}" id="cdp_next_scene">{{include.cdp_next_scene_text|default:'Next'}}</a>
+    <a  href="{{include.cdp_prev_scene_href}}" 
+        class="{% if include.cdp_prev_scene_href %}c-btn m-thin m-transparent {% if include.cdp_next_scene_href %}u-mr-sm{% endif %}{% else %}u-none{% endif %}"
+        u-p-sm="sm" u-fs-xs="sm" id="cdp_prev_scene">{{include.cdp_prev_scene_text|default:'Previous'}}</a>
+    <a  href="{{include.cdp_next_scene_href}}" 
+        class="{% if include.cdp_next_scene_href %}c-btn m-thin {% if include.cdp_prev_scene_href %}u-ml-sm{% endif %}{% else %}u-none{% endif %}"
+        u-p-sm="sm" u-fs-xs="sm" id="cdp_next_scene">{{include.cdp_next_scene_text|default:'Next'}}</a>
 </nav>
 
 <script src="js/iframe.js"></script>
