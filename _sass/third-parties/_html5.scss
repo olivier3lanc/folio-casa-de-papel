@@ -101,6 +101,16 @@ hr {
     }
 }
 
+@keyframes bottom_to_top_transform {
+    from {
+        transform: translateY(-50%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
+
 @keyframes left_to_right {
     from {
         left: 0%;

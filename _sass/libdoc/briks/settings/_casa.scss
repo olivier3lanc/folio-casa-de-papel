@@ -452,6 +452,7 @@ $briks-utilities: (
             blink: 0.8s linear 0s infinite alternate blink,
             left-to-right: 3s linear 0s infinite alternate left_to_right,
             bottom-to-top: 4s linear 0s infinite alternate bottom_to_top,
+            bottom-to-top-transform: 1s ease-in-out 0s infinite alternate bottom_to_top_transform,
         ),
         additional-names-and-values: (),
         responsive: false
@@ -979,6 +980,13 @@ $briks-components-generic: (
                     )
                 )
             ),
+            chevron-down: (
+                width: 1em,
+                height: 1em,
+                border-right: my-border(thin-solid-primary),
+                border-bottom: my-border(thin-solid-primary),
+                transform: rotate(45deg)
+            ),
             play: (
                 width: 0,
                 height: 0,
@@ -1146,6 +1154,9 @@ $briks-components-generic: (
             ),
             right: (
                 justify-content: flex-end
+            ),
+            baseline: (
+                align-items: baseline
             ),
             middle: (
                 align-items: center
