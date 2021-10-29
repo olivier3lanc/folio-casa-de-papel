@@ -1,6 +1,6 @@
 
 <div id="cdp_scene_detector"></div>
-<div class="u-h-100vh"></div>
+<div id="cdp_screen_height" class="{{include.cdp_scene_height|default:'u-h-100vh'}}"></div>
 
 <nav class="c-position m-relative m-botttom-xxl u-pb-xxl m-left-0 c-grid m-center m-nowrap u-w-100">
     <a  href="{{include.cdp_prev_scene_href}}" 
@@ -11,4 +11,7 @@
         u-p-sm="sm" u-fs-xs="sm" id="cdp_next_scene">{{include.cdp_next_scene_text|default:'Next'}}</a>
 </nav>
 
+<noscript>
+    <style>body { opacity: 1 } #cdp_screen_height { height: 0 !important; } </style>
+</noscript>
 <script src="js/iframe.js"></script>
