@@ -69,10 +69,13 @@ let casaDePapel = {
         if (this.defaults.el_nav_home !== null && this.defaults.el_loader !== null && this.defaults.el_scenes !== null) {
             this.defaults.el_nav_home.addEventListener('click', function(e) {
                 e.preventDefault();
-                casaDePapel.defaults.el_loader.classList.remove('u-transparent');
-                setTimeout(function() {
-                    casaDePapel.defaults.el_scenes.setAttribute('src', 'cdp_executives.html');
-                }, 500);
+                let scene_url = e.target.dataset.href || e.target.closest('a').dataset.href;
+                if (scene_url !== undefined) {
+                    casaDePapel.defaults.el_loader.classList.remove('u-transparent');
+                    setTimeout(function() {
+                        casaDePapel.defaults.el_scenes.setAttribute('src', scene_url);
+                    }, 500);
+                }
             })
         }
     }
