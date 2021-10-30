@@ -8,6 +8,7 @@ let casaDePapel = {
         el_audio_consent_modal: document.getElementById('cdp_audio_consent_modal'),
         el_icon_fs_enter: document.getElementById('cdp_icon_fs_enter'),
         el_icon_fs_exit: document.getElementById('cdp_icon_fs_exit'),
+        el_fullscreen: document.getElementById('cdp_fullscreen'),
         isFullscreen: false
     },
     audioConsentModal: function(cmd) {
@@ -25,10 +26,12 @@ let casaDePapel = {
             if (this.defaults.el_audio_player.paused) {
                 this.defaults.el_audio_player.play();
                 this.defaults.el_play_pause_button.innerHTML = '<span class="c-shape m-pause"></span>';
+                this.defaults.el_play_pause_button.setAttribute('title', '⏸ PAUSE soundtrack');
                 window.cdp_audio_player_paused = false;
             } else {
                 this.defaults.el_audio_player.pause();
                 this.defaults.el_play_pause_button.innerHTML = '<span class="c-shape m-play"></span>';
+                this.defaults.el_play_pause_button.setAttribute('title', '▶️ PLAY soundtrack');
                 window.cdp_audio_player_paused = true;
             }
         }
@@ -46,6 +49,7 @@ let casaDePapel = {
             this.defaults.isFullscreen = false;
             this.defaults.el_icon_fs_enter.classList.remove('u-none');
             this.defaults.el_icon_fs_exit.classList.add('u-none');
+            this.defaults.el_play_pause_button.setAttribute('title', 'Enter fullscreen');
         } else {
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
@@ -59,6 +63,7 @@ let casaDePapel = {
             this.defaults.isFullscreen = true;
             this.defaults.el_icon_fs_enter.classList.add('u-none');
             this.defaults.el_icon_fs_exit.classList.remove('u-none');
+            this.defaults.el_play_pause_button.setAttribute('title', 'Exit fullscreen');
         }
     },
     update: function() {

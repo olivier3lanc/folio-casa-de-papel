@@ -2,13 +2,13 @@
 <div id="cdp_scene_detector"></div>
 <div id="cdp_screen_height" class="{{include.cdp_scene_height|default:'u-h-100vh'}}"></div>
 
-<nav class="c-position m-relative m-botttom-xxl u-pb-xxl m-left-0 c-grid m-center m-nowrap u-w-100">
+<nav class="c-position m-relative m-botttom-xxl u-pb-xxl m-left-0 c-grid m-center m-nowrap u-w-100" role="navigation">
     <a  href="{{include.cdp_prev_scene_href}}" 
         class="{% if include.cdp_prev_scene_href %}{{include.cdp_prev_scene_class|default:'c-btn m-thin m-transparent'}} {% if include.cdp_next_scene_href %}u-mr-sm{% endif %}{% else %}u-none{% endif %}"
-        u-p-sm="sm" u-fs-xs="sm" id="cdp_prev_scene">{{include.cdp_prev_scene_text|default:'Previous'}}</a>
+        u-p-sm="sm" u-fs-xs="sm" id="cdp_prev_scene" title="{{include.cdp_prev_scene_title|default:'Previous scene'}}">{{include.cdp_prev_scene_text|default:'Previous'}}</a>
     <a  href="{{include.cdp_next_scene_href}}" 
         class="{% if include.cdp_next_scene_href %}{{include.cdp_next_scene_class|default:'c-btn m-thin'}} {% if include.cdp_prev_scene_href %}u-ml-sm{% endif %}{% else %}u-none{% endif %}"
-        u-p-sm="sm" u-fs-xs="sm" id="cdp_next_scene">{{include.cdp_next_scene_text|default:'Next'}}</a>
+        u-p-sm="sm" u-fs-xs="sm" id="cdp_next_scene" title="{{include.cdp_next_scene_title|default:'Next scene'}}">{{include.cdp_next_scene_text|default:'Next'}}</a>
 </nav>
 
 <script src="js/iframe.js"></script>
