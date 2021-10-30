@@ -1,0 +1,45 @@
+body {
+    opacity: 1;
+}
+
+#cdp_screen_height {
+    height: 0 !important;
+}
+
+#cdp_audio_player {
+    display: none;
+}
+
+#cdp_play_pause {
+    display: none;
+}
+
+#cdp_loader {
+    opacity: 0;
+}
+
+#cdp_fullscreen {
+    display: none;
+}
+
+[scroll-btween="cdp_final"] {
+    top: 40% !important;
+}
+
+[scroll-btween="cdp_scene"] {
+    opacity: 1 !important;
+}
+
+[scroll-btween="cdp_scene_1"] {
+    opacity: 1;
+}
+
+[scroll-btween="cdp_scene_2"] {
+    width: 120%;
+    right: 0;
+}
+
+[scroll-btween="cdp_scene_3"] {
+    height: 400%;
+    top: -150%;
+}

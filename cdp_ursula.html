@@ -8,12 +8,11 @@ layout: libdoc/playground
         scroll-frames-detector="cdp_scene_detector" 
         data-json="json/cdp_ursula.json">
     </figure>
-
-    <p class="c-position m-fixed m-bottom-50 m-left-xl u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-ws-nowrap u-inline-block u-p-none u-pt-md u-pr-md u-pe-none u-m-none"
+    <h1 class="c-position m-fixed m-bottom-50 m-left-xl u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-ws-nowrap u-inline-block u-p-none u-pt-md u-pr-md u-pe-none u-m-none u-lh-1"
         scroll-btween="cdp_scene" 
         scroll-btween-detector="cdp_scene_detector"
         data-opacity="|0:0 to 20:1 to 100:1|" 
-        data-transform="rotate(15deg) translateX(|0 to 50|%)"
+        data-transform="rotate(14deg) translateX(|0 to 50|%)"
         style="opacity: 0;"
         m-left-0="sm" 
         u-fs-lg="sm" 
@@ -38,10 +37,10 @@ layout: libdoc/playground
         <span class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block" 
             scroll-btween="cdp_scene_3"
             scroll-btween-detector="cdp_scene_detector" 
-            data-top="-150|%" 
+            data-top="|-150|%"
             data-height="|0 to 400|%"></span>
 
-    </p>
+    </h1>
 
 </article>
 
@@ -54,5 +53,13 @@ layout: libdoc/playground
     </div>
     <p class="u-fs-xs u-m-none u-ff-lead-2 u-c-primary-max u-tt-uppercase">Scroll down</p>
 </div>
+
+<noscript>
+    <style>
+        [scroll-btween="cdp_scene"] {
+            transform: rotate(14deg);
+        }
+    </style>
+</noscript>
 
 {% include _cdp_scene_nav.html cdp_prev_scene_href='cdp_executives.html' cdp_next_scene_href='cdp_albamiguel.html' %}

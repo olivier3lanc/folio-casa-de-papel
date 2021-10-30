@@ -28,6 +28,10 @@
                 <script type="text/javascript" src="{{ site.url }}{{ site.baseurl }}{{ script_url }}"></script>
             {% endif %}
         {% endfor %}
+
+        <noscript>
+            <link rel="stylesheet" href="{{ 'css/noscript.css' | absolute_url }}">
+        </noscript>
     </head>
     <body>
         {{content}}

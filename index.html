@@ -37,9 +37,15 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
     <audio id="cdp_audio_player">
         <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
     </audio>
+    <noscript>
+        <audio controls>
+            <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
+        </audio>
+    </noscript>
 </div>
 
 <button class="c-position m-fixed m-top-md m-right-md c-btn m-noborder m-transparent u-p-sm" 
+        id="cdp_fullscreen"
         m-top-sm="sm"
         m-right-sm="sm"
         onclick="casaDePapel.toggleFullScreen()">
@@ -58,9 +64,6 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
 </button>
 
 <noscript>
-    <style>
-        body { opacity: 1 }
-        #cdp_loader { opacity: 0; }
-    </style>
+    <link rel="stylesheet" href="{{ 'css/noscript.css' | absolute_url }}">
 </noscript>
 
