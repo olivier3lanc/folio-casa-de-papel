@@ -25,8 +25,8 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
     </div>
 </main>
 
-<div class="c-position m-fixed m-bottom-md m-left-md c-grid" m-bottom-xs="sm" m-left-xs="sm">
-    <button class="c-btn m-thin m-transparent u-p-sm" 
+<div class="c-position m-fixed m-bottom-md m-left-md c-grid u-pe-none" m-bottom-xs="sm" m-left-xs="sm">
+    <button class="c-btn m-thin m-transparent u-p-sm u-pe-auto" 
         id="cdp_play_pause" 
         onclick="casaDePapel.playPauseAudio();casaDePapel.audioConsentModal('close')">
         <span class="c-shape m-play"></span>
@@ -34,11 +34,11 @@ permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
     <div id="cdp_audio_consent_modal" class="c-spacing m-w-6 c-grid m-middle u-bc-primary-rev u-p-sm u-relative" m-w-4="sm">
         <p u-fs-xs="sm" class="u-m-none u-fs-sm u-ff-lead-2 u-lh-1">Best experience with the original soundtrack</p>
     </div>
-    <audio id="cdp_audio_player">
+    <audio id="cdp_audio_player" class="u-pe-auto">
         <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
     </audio>
     <noscript>
-        <audio controls>
+        <audio class="u-pe-auto" controls>
             <source src="audio/cecilia-krull-my-life-is-going-on.mp3" type="audio/mp3">
         </audio>
     </noscript>
