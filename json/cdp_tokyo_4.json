@@ -1,0 +1,6 @@
+---
+---
+[
+{% for i in (0..80) %}{ "url": "{{site.url}}{{site.baseurl}}/img/tokyo_4/casa_tokyo_4_{{i}}.webp" }{% if forloop.last == false %},{% endif %}
+{% endfor %}
+]

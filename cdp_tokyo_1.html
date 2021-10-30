@@ -1,0 +1,46 @@
+---
+layout: libdoc/playground
+---
+<article class="u-h-100vh">
+    <figure class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-brep-no-repeat u-bpos-center u-m-none u-p-none"
+        style="background-image: url(img/tokyo_1/casa_tokyo_1_0.webp); will-change: background-image, background-size;" 
+        scroll-frames="cdp_scene"
+        scroll-frames-detector="cdp_scene_detector" 
+        data-json="json/cdp_tokyo_1.json">
+    </figure>
+    <div class="c-position m-fixed m-top-0 u-w-100 u-h-100vh u-bc-primary-rev u-pe-none u-faded u-bg-stripes"></div>
+    <h1 class="c-position m-fixed m-top-xxl m-right-xxl u-c-primary u-tt-uppercase u-fs-xl u-lsp-large u-ws-nowrap u-inline-block u-p-none u-pt-md u-pr-md u-pe-none u-m-none u-lh-1"
+        scroll-btween="cdp_scene" 
+        scroll-btween-detector="cdp_scene_detector"
+        data-opacity="|0:0 to 20:1 to 100:1|" 
+        data-transform="translateY(|0 to 50|%)"
+        style="opacity: 0;"
+        m-right-lg="sm"
+        u-fs-lg="sm" 
+        u-pt-sm="sm" 
+        u-pr-sm="sm">
+        Úrsula Corberó
+
+        <span class="c-position m-absolute m-bottom-100 m-right-0 u-block u-pr-md u-pb-sm u-fs-md" 
+            scroll-btween="cdp_scene_1"
+            scroll-btween-detector="cdp_scene_detector"
+            data-opacity="|0:0 to 100:1|"
+            u-pr-sm="sm"
+            u-pb-xxs="sm"
+            u-fs-sm="sm">Tokyo</span>
+
+        <span class="c-position m-absolute m-top-0 u-bt-large-solid-primary u-block" 
+            scroll-btween="cdp_scene_2" 
+            scroll-btween-detector="cdp_scene_detector"
+            data-width="|0 to 120|%"
+            data-right="|-40 to 0|%"></span>
+
+        <span class="c-position m-absolute m-right-0 u-bl-large-solid-primary u-block" 
+            scroll-btween="cdp_scene_3"
+            scroll-btween-detector="cdp_scene_detector" 
+            data-top="-150|%" 
+            data-height="|0 to 400|%"></span>
+    </h1>
+</article>
+
+{% include _cdp_scene_nav.html cdp_prev_scene_href='cdp_rio_1.html' cdp_next_scene_href='cdp_rio_2.html' cdp_prev_scene_class='c-btn m-thin m-transparent' cdp_next_scene_class='c-btn m-thin m-transparent' %}
