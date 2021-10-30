@@ -1,8 +1,8 @@
 # Jekyll configuration
 # ---
-title: La Casa de Papel # title of the documentation
+title: La Casa de Papel HTML5 cinematics # title of the documentation
 description: >- # Description of the docs. (>- means to ignore newlines until next param)
-  Web design inspired from La Casa de Papel serie (Money Heist) start credits
+  Web cinematics inspired from La Casa de Papel serie (Money Heist) start credits
 # baseurl: "/ow/folio-2021/casavideo/folio-casa-de-papel/_site" # the subpath of your site, e.g. /blog
 # url: "http://localhost" # the base hostname & protocol for your site, e.g. http://example.com
 #permalink: /:path/:basename/:output_ext

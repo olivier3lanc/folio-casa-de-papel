@@ -1,8 +1,14 @@
----
-layout: libdoc/playground
-# permalink: index.html # To avoid: Warning: Empty `slug` generated for '/'.
-# unlisted: true
-# iframe_mode: true
----
+# La Casa de Papel HTML5 cinematics
 
-<h1>La Casa de Papel</h1>
+Web cinematics inspired from [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) serie (Money Heist) start credits.
+
+![La Casa de Papel](img/html5_la_casa_de_papel.webp)
+
+Stylesheets
+* BRIKS
+* [normalize.css](https://necolas.github.io/normalize.css/)
+
+Javascript
+* [Ola.js](https://github.com/franciscop/ola)
+* [ScrollBtween.js](https://github.com/olivier3lanc/Scroll-Btween)
+* [ScrollFrames.js](https://github.com/olivier3lanc/Scroll-Frames)
