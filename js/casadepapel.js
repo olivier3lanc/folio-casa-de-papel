@@ -49,7 +49,7 @@ let casaDePapel = {
             this.defaults.isFullscreen = false;
             this.defaults.el_icon_fs_enter.classList.remove('u-none');
             this.defaults.el_icon_fs_exit.classList.add('u-none');
-            this.defaults.el_play_pause_button.setAttribute('title', 'Enter fullscreen');
+            this.defaults.el_fullscreen.setAttribute('title', 'Enter fullscreen');
         } else {
             if (elem.requestFullscreen) {
                 elem.requestFullscreen();
@@ -63,7 +63,7 @@ let casaDePapel = {
             this.defaults.isFullscreen = true;
             this.defaults.el_icon_fs_enter.classList.add('u-none');
             this.defaults.el_icon_fs_exit.classList.remove('u-none');
-            this.defaults.el_play_pause_button.setAttribute('title', 'Exit fullscreen');
+            this.defaults.el_fullscreen.setAttribute('title', 'Exit fullscreen');
         }
     },
     update: function() {
