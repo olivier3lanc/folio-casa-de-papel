@@ -38,6 +38,11 @@ Boths project are only for demo and fun purpose.
     Mastered by Joshua Kessler |
     Photo by Caitlin Canty |
     Released June 26, 2018
+
+## Fonts
+
+* [Compacta Bold](https://www.fontshop.com/families/compacta)
+* [Tungsten SemiBold](https://www.typography.com/fonts/tungsten/styles/tungsten)
 ## Stylesheets
 
 * BRIKS
@@ -51,5 +56,5 @@ Boths project are only for demo and fun purpose.
 
 ## Making of
 
-1. All embedded texts were removed from frames and extracted with high quality using masks and timeline in [Adobe Photoshop](https://www.adobe.com/fr/products/photoshop.html)
-2. All series of frames were highly compressed in [webp](https://en.wikipedia.org/wiki/WebP)
+1. All embedded texts were removed from frames - using masks and timeline - and extracted with high quality in [Adobe Photoshop](https://www.adobe.com/fr/products/photoshop.html)
+2. All series of frames were highly compressed in [WebP](https://en.wikipedia.org/wiki/WebP)
