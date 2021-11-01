@@ -1,7 +1,28 @@
 
 <div id="cdp_scene_detector"></div>
 <div id="cdp_screen_height" class="{{include.cdp_scene_height|default:'u-h-100vh'}}"></div>
-
+{% if include.cdp_next_scene_href == 'cdp_executives.html' %}
+    <h3 class="u-ta-center u-ff-lead-2">If you enjoyed, you may also like</h3>
+    <nav class="u-ta-center u-mb-xl" role="navigation">
+        <a  href="tokyorio.html"
+            class="c-btn m-thin u-bg-tokyo-and-rio u-p-xl u-c-transparent"
+            title="Launch Tokyo and Rio Cinematics"
+            target="_parent">
+            Tokyo and Rio Cinematics
+        </a>
+    </nav>
+{% endif %}
+{% if include.cdp_next_scene_href == 'cdp_rio_1.html' %}
+    <h3 class="u-ta-center u-ff-lead-2">If you enjoyed, you may also like</h3>
+    <nav class="u-ta-center u-mb-xl" role="navigation">
+        <a  href="./"
+            class="c-btn m-thin u-bg-la-casa-de-papel u-p-xl u-c-transparent"
+            title="Launch La Casa de Papel Cinematics"
+            target="_parent">
+            La Casa de Papel Cinematics
+        </a>
+    </nav>
+{% endif %}
 <nav class="c-position m-relative m-botttom-xxl u-pb-xxl m-left-0 c-grid m-center m-nowrap u-w-100" role="navigation">
     <a  href="{{include.cdp_prev_scene_href}}" 
         class="{% if include.cdp_prev_scene_href %}{{include.cdp_prev_scene_class|default:'c-btn m-thin m-transparent'}} {% if include.cdp_next_scene_href %}u-mr-sm{% endif %}{% else %}u-none{% endif %}"
