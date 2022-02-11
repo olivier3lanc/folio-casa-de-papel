@@ -2,9 +2,7 @@
 
 Web cinematics inspired from [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) serie (Money Heist) start credits.
 
-![La Casa de Papel](img/html5_la_casa_de_papel.webp)
-
-[Launch demo La Casa de Papel start credits cinematics](https://olivier3lanc.github.io/folio-casa-de-papel)
+[![La Casa de Papel](img/html5_la_casa_de_papel.webp)](https://olivier3lanc.github.io/folio-casa-de-papel)
 
 # Tokyo and Rio cinematics
 
