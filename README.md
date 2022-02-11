@@ -1,16 +1,15 @@
 # La Casa de Papel HTML5 cinematics
 
-Web cinematics inspired from [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) serie (Money Heist) start credits.
+Web cinematics inspired from [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) serie (Money Heist) start credits. 
+[Launch](https://olivier3lanc.github.io/folio-casa-de-papel)
 
 [![La Casa de Papel](img/html5_la_casa_de_papel.webp)](https://olivier3lanc.github.io/folio-casa-de-papel)
 
 # Tokyo and Rio cinematics
 
-Web cinematics inspired from the TV serie [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) Season 3 Episode 6.
+Web cinematics inspired from the TV serie [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) Season 3 Episode 6. [Launch](https://olivier3lanc.github.io/folio-casa-de-papel/tokyorio.html)
 
-![La Casa de Papel](img/html5_tokyo_and_rio.webp)
-
-[Launch demo Tokyo and Rio cinematics](https://olivier3lanc.github.io/folio-casa-de-papel/tokyorio.html)
+[![La Casa de Papel](img/html5_tokyo_and_rio.webp)](https://olivier3lanc.github.io/folio-casa-de-papel/tokyorio.html)
 
 # Credits
 
