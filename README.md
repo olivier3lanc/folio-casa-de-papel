@@ -1,3 +1,8 @@
+This repository is a showcase for my personal following Javascript libraries:
+
+*   [ScrollBtween.js](https://github.com/olivier3lanc/Scroll-Btween) Tween any CSS values on any DOM element in relation with its position into the viewport.
+*   [ScrollFrames.js](https://github.com/olivier3lanc/Scroll-Frames) Animate sequences of still frames on any DOM element in relation with its position into the viewport.
+
 # La Casa de Papel HTML5 cinematics
 
 Web cinematics inspired from [La Casa de Papel](https://www.antena3.com/series/casa-de-papel/) serie (Money Heist) start credits. 
